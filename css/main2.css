@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
-    margin: o;
     padding: 0;
 }
 
@@ -233,14 +230,22 @@ body.dark-theme #header:hover #avtarization:hover {
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.199);
 }
 
+#block2-cart {
+    display: block;
+    position: absolute;
+    height: 40cap;
+    width: 60cap;
+    border-radius: 60px;
+    text-align: center;
+    margin: auto;
+    margin-top: -425px;
+    margin-left: 650px;
+}
+
 .class2Img, .class3Img, .class4Img, .class5Img {
-    position: relative;
     height: 26cap;
     width: 26cap;
     z-index: 40;
-    float: right;
-    margin-top: -300px;
-    margin-right: 400px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -285,6 +290,7 @@ body.dark-theme #header:hover #avtarization:hover {
     background-image: url(../img/5.png);
     -webkit-mask-image: url(../img/5.png);
     mask-image: url(../img/5.png);
+    margin-top: 100px;
 }
 
 .class2Img:hover {
@@ -298,10 +304,10 @@ body.dark-theme #header:hover #avtarization:hover {
     height: 20cap;
     width: 15cap;
     z-index: 30;
-    margin-top: -400px;
-    margin-right: 150px;
     background-size: 195px;
     transform: scaleX(-1) rotate(30deg);
+    margin-top: -350px;
+    margin-left: 300px;
 }
 
 .class3Img:hover {
@@ -315,10 +321,9 @@ body.dark-theme #header:hover #avtarization:hover {
     height: 13cap;
     width: 10cap;
     z-index: 20;
-    margin-top: -180px;
-    margin-right: 280px;
     background-size: 100px;
     transform: perspective(600px) rotateX(30deg) rotate(-15deg);
+    margin-left: 300px;
 }
 
 .class4Img:hover {
@@ -332,10 +337,10 @@ body.dark-theme #header:hover #avtarization:hover {
     height: 11cap;
     width: 7cap;
     z-index: 20;
-    margin-top: -130px;
-    margin-right: 90px;
     background-size: 85px;
     transform: perspective(600px) rotateX(30deg) rotate(15deg);
+    margin-top: -160px;
+    margin-left: 500px;
 }
 
 .class5Img:hover {
@@ -349,6 +354,9 @@ body.dark-theme #header:hover #avtarization:hover {
     left: 100%;
     transition: left 0.8s ease;
 }
+
+
+
 
 #block3 {
     display: block;
