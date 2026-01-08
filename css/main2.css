@@ -198,7 +198,7 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 #avatar {
-    background-image: url(/Img/picture.png);
+    background-image: url(../img/picture.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -282,9 +282,9 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 .class2Img {
-    background-image: url(/Img/5.png);
-    -webkit-mask-image: url(/Img/5.png);
-    mask-image: url(/Img/5.png);
+    background-image: url(../img/5.png);
+    -webkit-mask-image: url(../img/5.png);
+    mask-image: url(../img/5.png);
 }
 
 .class2Img:hover {
@@ -292,9 +292,9 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 .class3Img {
-    background-image: url(/Img/1.png);
-    -webkit-mask-image: url(/Img/1.png);
-    mask-image: url(/Img/1.png);
+    background-image: url(../img/1.png);
+    -webkit-mask-image: url(../img/1.png);
+    mask-image: url(../img/1.png);
     height: 20cap;
     width: 15cap;
     z-index: 30;
@@ -309,9 +309,9 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 .class4Img {
-    background-image: url(/Img/3.png);
-    -webkit-mask-image: url(/Img/3.png);
-    mask-image: url(/Img/3.png);
+    background-image: url(../img/3.png);
+    -webkit-mask-image: url(../img/3.png);
+    mask-image: url(../img/3.png);
     height: 13cap;
     width: 10cap;
     z-index: 20;
@@ -326,9 +326,9 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 .class5Img {
-    background-image: url(/Img/4.png);
-    -webkit-mask-image: url(/Img/4.png);
-    mask-image: url(/Img/4.png);
+    background-image: url(../img/4.png);
+    -webkit-mask-image: url(../img/4.png);
+    mask-image: url(../img/4.png);
     height: 11cap;
     width: 7cap;
     z-index: 20;
@@ -390,31 +390,31 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 .blockff {
-    background-image: url(/Img/pictureff.png);
+    background-image: url(../img/pictureff.png);
 }
 
 .block11 {
-    background-image: url(/Img/roblox-icon.png);
+    background-image: url(../img/roblox-icon.png);
     background-color: #191919;
 }
 
 .block22 {
-    background-image: url(/Img/genshin-icon.png);
+    background-image: url(../img/genshin-icon.png);
     background-color: #2a2a2a;
 }
 
 .block33 {
-    background-image: url(/Img/standoff-icon.png);
+    background-image: url(../img/standoff-icon.png);
     background-color: #1a1a1a;
 }
 
 .block44 {
-    background-image: url(/Img/ml-icon.png);
+    background-image: url(../img/ml-icon.png);
     background-color: #252525;
 }
 
 .block55 {
-    background-image: url(/Img/pubg-icon.png);
+    background-image: url(../img/pubg-icon.png);
     background-color: #2d2d2d;
 }
 
@@ -465,7 +465,7 @@ body.dark-theme #header:hover #avtarization:hover {
 
 #block4-img {
     display: block;
-    background-image: url(/Img/Screen6.png);
+    background-image: url(../img/Screen6.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -539,7 +539,7 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 #MenuImg {
-    background-image: url(/Img/Screen3.png);
+    background-image: url(../img/Screen3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

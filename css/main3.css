@@ -240,7 +240,7 @@ h1 b{
 }
 
 #avatar {
-    background-image: url(/Img/picture.png);
+    background-image: url(../img/picture.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -298,7 +298,7 @@ h1 b{
 }
 
 #MenuImg {
-    background-image: url(/Img/Screen3.png);
+    background-image: url(../img/Screen3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

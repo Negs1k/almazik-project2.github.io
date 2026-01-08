@@ -164,7 +164,7 @@ b1 {
 }
 
 #avatar {
-    background-image: url(/Img/picture.png);
+    background-image: url(../img/picture.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -200,7 +200,7 @@ b1 {
 }
 
 #block2img {
-    background-image: url(/Img/Screen5.png);
+    background-image: url(../img/Screen5.png);
     height: 40cap;
     width: 60cap;
     float: right;
@@ -220,7 +220,7 @@ b1 {
 }
 
 #blockff {
-    background-image: url(/Img/pictureff.png);
+    background-image: url(../img/pictureff.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -278,7 +278,7 @@ b1 {
 }
 
 #img1 {
-    background-image: url(/Img/Screen4.png);
+    background-image: url(../img/Screen4.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -287,7 +287,7 @@ b1 {
 }
 
 #img2 {
-    background-image: url(/Img/Screen2.png);
+    background-image: url(../img/Screen2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -342,7 +342,7 @@ b1 {
 }
 
 #MenuImg {
-    background-image: url(/Img/Screen3.png);
+    background-image: url(../img/Screen3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
