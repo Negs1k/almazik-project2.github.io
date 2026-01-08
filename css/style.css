@@ -203,6 +203,7 @@ b1 {
     height: 40cap;
     width: 60cap;
     float: right;
+    border-radius: 60px;
 }
 
 #bottom-container {
@@ -808,4 +809,133 @@ body.dark-theme .sidebar-link .theme-status {
 b {
     text-shadow: 
         0 0 20px rgba(0, 211, 112, 0.4);
+}
+
+@media (max-width: 1000px) {
+    #block2 {
+    height: 60cap;
+    width: 120cap;
+    }
+
+    #block2img {
+    height: 60cap;
+    width: 40cap;
+    }
+
+    h1  {
+        font-size: 80px;
+    }
+
+    #block2 h2 {
+        font-size: 35px;
+        margin-top: 80px;
+    }
+
+    .PPOP {
+        position: relative;
+        font-size: 40px;
+        padding-top: 490px;
+    }
+
+    #blockff {
+        height: 450px;
+        width: 450px;
+    }
+
+    #pm {
+        height: 20cap;
+        width: 120cap;
+        text-align: center;
+        margin: auto;
+        float: center;
+        margin-top: 200px;
+    }
+    
+    .pm {
+        padding: 100px;
+    }
+
+    #footertextconteiner {
+        height: 350cap;
+        width: 120cap;
+    }
+
+    #img1, #img2 {
+        height: 1000px;
+        width: 1200px;
+        background-position: 0 -200px;
+    }
+
+    #img2 {
+        position: relative;
+        margin-left: 70px;
+        margin-top: 1100px;
+        background-position: 0 -100px;
+        margin-top: 1000px;
+    }
+
+    #img3, #img4 {
+        position: absolute;
+        height: 1000px;
+        width: 1200px;
+        margin-left: 70px;
+        margin-top: 1100px;
+    }
+
+    #img4 {
+        margin-top: 270cap;
+    }
+    
+    .textImg1, .textImg3 {
+        font-size: 100px;
+    }
+
+    .textImg2, .textImg4 {
+        font-size: 50px;
+    }
+
+    #footer {
+        height: 60cap;
+        width: 120cap;
+        margin-top: 10cap;
+    }
+
+    #Menu {
+        height: 8cap;
+        width: 120cap;
+        z-index: 10;
+    }
+
+    #MenuImg {
+        background-image: url("");
+    }
+
+    .pm2, .pm3, .pm4 {
+        font-size: 80px;
+        text-align: left;
+        margin-right: 100px;
+    }
+
+    .pm3 {
+        font-size: 40px;
+        margin-top: -40px;
+    }
+
+    .pm4 {
+        font-size: 40px;
+        margin-top: -20px;
+    }
+
+    #cont1, #cont2, #cont3, #cont4 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    #cont1 {
+        margin-left: -800px;
+    }
+
+    #cont2 {
+        margin-left: -550px;
+    }
 }
