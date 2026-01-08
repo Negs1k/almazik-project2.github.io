@@ -32,7 +32,9 @@ body.dark-theme {
     background-color: #121212;
     color: #e0e0e0;
 }
-
+body.dark-theme .fa-solid {
+    color: rgb(255, 255, 255);
+}
 body.dark-theme #block3,
 body.dark-theme #block3-2,
 body.dark-theme #block4,
@@ -276,12 +278,12 @@ a {
 }
 
 #vipl1 {
-    background-image: url(../img/ScreenVaun1.png);
+    background-image: url(../img/ScreenVaun2.png);
     margin-left: 100px;
 }
 
 #vipl2 {
-    background-image: url(../img/ScreenVaun2.png);
+    background-image: url(../img/ScreenVaun1.png);
 }
 
 #vip1, #vip2, #vip3, #vip4, #vip5, #vip6 {
@@ -358,11 +360,11 @@ a {
     transform: scale(1.02);
     box-shadow: 0px 0px 40px rgb(255, 136, 0);
 }
-#vipl1:hover {
+#vipl2:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 40px rgb(255, 230, 0);
 }
-#vipl2:hover {
+#vipl1:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 40px rgb(183, 0, 255);
 }
@@ -386,10 +388,10 @@ a {
 #vip6:hover #vipTop {
     box-shadow: 0px 0px 40px rgba(255, 136, 0, 0.63);
 }
-#vipl1:hover  #viplTop{
+#vipl2:hover  #viplTop{
     box-shadow: 0px 0px 40px rgb(255, 230, 0);
 }
-#vipl2:hover  #viplTop{
+#vipl1:hover  #viplTop{
     box-shadow: 0px 0px 40px rgb(183, 0, 255);
 }
 
@@ -478,7 +480,7 @@ h5 {
     border-radius: 10px;
 }
 
-#buttonVipl1 {
+#buttonVipl2 {
     float: right;
     background-color: rgb(255, 230, 0);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
@@ -492,7 +494,7 @@ h5 {
     margin-top: -35px;
 }
 
-#buttonVipl2 {
+#buttonVipl1 {
     float: right;
     background-color: rgb(225, 0, 255);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
@@ -506,32 +508,32 @@ h5 {
     margin-top: -35px;
 }
 
-#buttonVipl1:hover .fa-solid {
-    color: rgb(241, 241, 241);
-}
-
 #buttonVipl2:hover .fa-solid {
     color: rgb(241, 241, 241);
 }
 
-#buttonVipl1:hover {
+#buttonVipl1:hover .fa-solid {
+    color: rgb(241, 241, 241);
+}
+
+#buttonVipl2:hover {
     box-shadow: 0px 0px 10px rgb(255, 238, 0);
     border-radius: 10px;
 }
 
-#buttonVipl2:hover {
+#buttonVipl1:hover {
     box-shadow: 0px 0px 10px rgb(225, 0, 255);
     border-radius: 10px;
 }
 
-#buttonVipl1 .fa-solid {
+#buttonVipl2 .fa-solid {
     color: rgb(0, 0, 0);
     font-size: 25px;
     margin-top: 0px;
     margin-left: 12px;
 }
 
-#buttonVipl2 .fa-solid {
+#buttonVipl1 .fa-solid {
     color: rgb(0, 0, 0);
     font-size: 25px;
     margin-top: 0px;
