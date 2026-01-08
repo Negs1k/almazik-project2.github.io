@@ -224,7 +224,7 @@ h1 b{
 }
 
 #avatar {
-    background-image: url(.../img/picture.png);
+    background-image: url(../img/picture.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -298,27 +298,27 @@ a {
 }
 
 #vip1 {
-    background-image: url(.../img/105.png);
+    background-image: url(../img/105.png);
 }
 
 #vip2 {
-    background-image: url(.../img/326.png);
+    background-image: url(../img/326.png);
 }
 
 #vip3 {
-    background-image: url(.../img/546.png);
+    background-image: url(../img/546.png);
 }
 
 #vip4 {
-    background-image: url(.../img/1113.png);
+    background-image: url(../img/1113.png);
 }
 
 #vip5 {
-    background-image: url(.../img/2398.png);
+    background-image: url(../img/2398.png);
 }
 
 #vip6 {
-    background-image: url(.../img/6160.png);
+    background-image: url(../img/6160.png);
 }
 
 #vip1:hover, #vip2:hover, #vip3:hover, #vip4:hover, #vip5:hover, #vip6:hover {
@@ -464,7 +464,7 @@ li {
 
 #block4-img {
     display: block;
-    background-image: url(.../img/1.png);
+    background-image: url(../img/1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -481,11 +481,11 @@ li {
     box-shadow: 
         0 0 25px rgba(0, 0, 0, 0.6),
         inset 0 0 25px rgba(255, 255, 255, 0.1);
-    -webkit-mask-image: url(.../img/1.png);
+    -webkit-mask-image: url(../img/1.png);
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    mask-image: url(.../img/1.png);
+    mask-image: url(../img/1.png);
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -507,11 +507,11 @@ li {
     transform: skewX(-25deg);
     transition: left 0.8s ease;
     z-index: 1;
-    -webkit-mask-image: url(.../img/1.png);
+    -webkit-mask-image: url(../img/1.png);
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    mask-image: url(.../img/1.png);
+    mask-image: url(../img/1.png);
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -554,7 +554,7 @@ li {
 }
 
 #MenuImg {
-    background-image: url(.../img/Screen3.png);
+    background-image: url(../img/Screen3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
