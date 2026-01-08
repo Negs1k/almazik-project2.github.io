@@ -232,14 +232,13 @@ body.dark-theme #header:hover #avtarization:hover {
 
 #block2-cart {
     display: block;
-    position: absolute;
     height: 40cap;
     width: 60cap;
     border-radius: 60px;
     text-align: center;
     margin: auto;
     margin-top: -425px;
-    margin-left: 650px;
+    float: right;
 }
 
 .class2Img, .class3Img, .class4Img, .class5Img {
@@ -251,33 +250,6 @@ body.dark-theme #header:hover #avtarization:hover {
     background-repeat: no-repeat;
     transform: rotate(10deg);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-}
-
-.class2Img::before,
-.class3Img::before,
-.class4Img::before,
-.class5Img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
-    transform: skewX(-25deg);
-    transition: left 0.8s ease;
-    z-index: 1;
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -307,7 +279,7 @@ body.dark-theme #header:hover #avtarization:hover {
     background-size: 195px;
     transform: scaleX(-1) rotate(30deg);
     margin-top: -350px;
-    margin-left: 300px;
+    margin-left: 350px;
 }
 
 .class3Img:hover {
@@ -340,19 +312,11 @@ body.dark-theme #header:hover #avtarization:hover {
     background-size: 85px;
     transform: perspective(600px) rotateX(30deg) rotate(15deg);
     margin-top: -160px;
-    margin-left: 500px;
+    margin-left: 530px;
 }
 
 .class5Img:hover {
     transform: perspective(600px) rotateX(30deg) rotate(15deg) scale(1.05);
-}
-
-.class2Img:hover::before,
-.class3Img:hover::before,
-.class4Img:hover::before,
-.class5Img:hover::before {
-    left: 100%;
-    transition: left 0.8s ease;
 }
 
 
@@ -402,27 +366,22 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 .block11 {
-    background-image: url(../img/roblox-icon.png);
     background-color: #191919;
 }
 
 .block22 {
-    background-image: url(../img/genshin-icon.png);
     background-color: #2a2a2a;
 }
 
 .block33 {
-    background-image: url(../img/standoff-icon.png);
     background-color: #1a1a1a;
 }
 
 .block44 {
-    background-image: url(../img/ml-icon.png);
     background-color: #252525;
 }
 
 .block55 {
-    background-image: url(../img/pubg-icon.png);
     background-color: #2d2d2d;
 }
 

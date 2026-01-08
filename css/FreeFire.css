@@ -33,11 +33,8 @@ body.dark-theme {
     color: #e0e0e0;
 }
 
-body.dark-theme .fa-solid {
-    color: #ffffff;
-}
-
 body.dark-theme #block3,
+body.dark-theme #block3-2,
 body.dark-theme #block4,
 body.dark-theme #footer {
     background-color: #1e1e1e;
@@ -96,32 +93,13 @@ body.dark-theme #vipTop {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-theme #vip1:hover, 
-body.dark-theme #vip2:hover, 
-body.dark-theme #vip3:hover, 
-body.dark-theme #vip4:hover, 
-body.dark-theme #vip5:hover, 
-body.dark-theme #vip6:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 0px 40px rgba(1, 224, 57, 0.8);
+body.dark-theme #viplTop {
+    background-color: #2d2d2d;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-theme #vip1:hover #vipTop, 
-body.dark-theme #vip2:hover #vipTop, 
-body.dark-theme #vip3:hover #vipTop, 
-body.dark-theme #vip4:hover #vipTop, 
-body.dark-theme #vip5:hover #vipTop, 
-body.dark-theme #vip6:hover #vipTop {
-    box-shadow: 0px 6px 17px rgba(1, 224, 57, 0.6);
-}
-
-body.dark-theme #buttonVip1 {
-    background-color: rgb(1, 224, 57);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-}
-
-body.dark-theme #buttonVip1:hover {
-    box-shadow: 0px 0px 10px rgba(1, 224, 57, 0.8);
+body.dark-theme #block3-2 h6 {
+    color: #ffffff;
 }
 
 body.dark-theme .fa-facebook-f,
@@ -149,6 +127,16 @@ body.dark-theme .fa-youtube:hover {
     text-align: left;
     font-size: 30px;
     padding-left: 50px;
+}
+
+#viplTop p2 {
+    color: yellow;
+    text-shadow: 0 0 2px yellow;
+}
+
+#viplTop p3 {
+    color: rgb(204, 0, 255);
+    text-shadow: 0 0 2px rgb(225, 0, 255);
 }
 
 h1 b{
@@ -271,6 +259,31 @@ a {
     color: black;
 }
 
+#vipl1, #vipl2 {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.404);
+    height: 340px;
+    width: 500px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    float: left;
+    margin: auto;
+    transition: color 0.7s, transform 0.5s ease;
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+    background-size: cover;
+    background-position: 0px -100px;
+    background-repeat: no-repeat;
+    margin: 100px 100px 0px 45px;
+}
+
+#vipl1 {
+    background-image: url(../img/ScreenVaun1.png);
+    margin-left: 100px;
+}
+
+#vipl2 {
+    background-image: url(../img/ScreenVaun2.png);
+}
+
 #vip1, #vip2, #vip3, #vip4, #vip5, #vip6 {
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.404);
     height: 225px;
@@ -321,14 +334,65 @@ a {
     background-image: url(../img/6160.png);
 }
 
-#vip1:hover, #vip2:hover, #vip3:hover, #vip4:hover, #vip5:hover, #vip6:hover {
+#vip1:hover {
     transform: scale(1.02);
-    box-shadow: 0px 0px 40px rgb(21, 255, 0);
+    box-shadow: 0px 0px 40px rgb(255, 167, 96);
+}
+#vip2:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(104, 250, 255);
+}
+#vip3:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(255, 255, 255);
+}
+#vip4:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(192, 255, 109);
+}
+#vip5:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(255, 124, 248);
+}
+#vip6:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(255, 136, 0);
+}
+#vipl1:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(255, 230, 0);
+}
+#vipl2:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgb(183, 0, 255);
 }
 
-#vip1:hover #vipTop, #vip2:hover #vipTop, #vip3:hover #vipTop, #vip4:hover #vipTop, #vip5:hover #vipTop, #vip6:hover #vipTop {
-    box-shadow: 0px 6px 17px rgba(21, 255, 0);
+
+#vip1:hover #vipTop {
+    box-shadow: 0px 0px 40px rgb(255, 167, 96);
 }
+#vip2:hover #vipTop {
+    box-shadow: 0px 0px 40px rgb(104, 250, 255);
+}
+#vip3:hover #vipTop {
+    box-shadow: 0px 0px 40px rgb(255, 255, 255);
+}
+#vip4:hover #vipTop {
+    box-shadow: 0px 0px 40px rgb(192, 255, 109);
+}
+#vip5:hover #vipTop {
+    box-shadow: 0px 0px 40px rgba(255, 124, 248, 0.644);
+}
+#vip6:hover #vipTop {
+    box-shadow: 0px 0px 40px rgba(255, 136, 0, 0.63);
+}
+#vipl1:hover  #viplTop{
+    box-shadow: 0px 0px 40px rgb(255, 230, 0);
+}
+#vipl2:hover  #viplTop{
+    box-shadow: 0px 0px 40px rgb(183, 0, 255);
+}
+
 
 #vipTop {
     height: 35%;
@@ -338,6 +402,30 @@ a {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.192);
     margin-top: 225px;
+}
+
+#viplTop {
+    height: 30%;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.192);
+    margin-top: 330px;
+}
+
+#viplTop h4 {
+    margin-top: -30px;
+    font-size: 20px;
+}
+
+#viplTop h3 {
+    font-size: 25px;
+}
+
+#viplTop h5 {
+    font-size: 19px;
+    margin-top: -15px;
 }
 
 h3 {
@@ -363,7 +451,7 @@ h5 {
 .fa-solid {
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-top: -3px;
+    margin-top: 3px;
     margin-left: -2px;
 }
 
@@ -378,7 +466,7 @@ h5 {
     bottom: 50px;
     right: 20px;
     text-align: center;
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 #buttonVip1:hover .fa-solid {
@@ -388,6 +476,66 @@ h5 {
 #buttonVip1:hover {
     box-shadow: 0px 0px 10px rgb(0, 255, 34);
     border-radius: 10px;
+}
+
+#buttonVipl1 {
+    float: right;
+    background-color: rgb(255, 230, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 50px;
+    right: 20px;
+    text-align: center;
+    margin-top: -35px;
+}
+
+#buttonVipl2 {
+    float: right;
+    background-color: rgb(225, 0, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 50px;
+    right: 20px;
+    text-align: center;
+    margin-top: -35px;
+}
+
+#buttonVipl1:hover .fa-solid {
+    color: rgb(241, 241, 241);
+}
+
+#buttonVipl2:hover .fa-solid {
+    color: rgb(241, 241, 241);
+}
+
+#buttonVipl1:hover {
+    box-shadow: 0px 0px 10px rgb(255, 238, 0);
+    border-radius: 10px;
+}
+
+#buttonVipl2:hover {
+    box-shadow: 0px 0px 10px rgb(225, 0, 255);
+    border-radius: 10px;
+}
+
+#buttonVipl1 .fa-solid {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-top: 0px;
+    margin-left: 12px;
+}
+
+#buttonVipl2 .fa-solid {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-top: 0px;
+    margin-left: 12px;
 }
 
 li {
@@ -411,7 +559,18 @@ li {
 #block3 {
     display: block;
     background-color: rgb(223, 255, 220);
-    height: 90cap;
+    height: 80cap;
+    width: 120cap;
+    text-align: center;
+    margin: auto;
+    float: center;
+    z-index: 10;
+}
+
+#block3-2 {
+    display: block;
+    background-color: rgb(223, 255, 220);
+    height: 70cap;
     width: 120cap;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -419,6 +578,17 @@ li {
     margin: auto;
     float: center;
     z-index: 10;
+}
+
+b {
+    color: rgb(1, 224, 57);
+}
+
+#block3-2 h6 {
+    color: rgb(0, 0, 0);
+    font-size: 70px;
+    margin: auto;
+    text-align: center;
 }
 
 #block4 {
@@ -518,8 +688,6 @@ li {
 }
 
 #block4-img:hover {
-    box-shadow: 
-        0 10px 40px rgba(0, 0, 0, 0.815);
     transform: scale(1.02);
     filter: 
         brightness(1.1);
