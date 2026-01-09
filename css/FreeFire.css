@@ -129,8 +129,9 @@ body.dark-theme .fa-youtube:hover {
 }
 
 #viplTop p2 {
-    color: yellow;
-    text-shadow: 0 0 2px yellow;
+    color: rgb(255, 153, 0);
+    text-shadow: 0 0 2px rgb(212, 127, 0);
+    font-weight: 400;
 }
 
 #viplTop p3 {
@@ -359,7 +360,7 @@ a {
 }
 #vipl2:hover {
     transform: scale(1.02);
-    box-shadow: 0px 0px 40px rgb(255, 230, 0);
+    box-shadow: 0px 0px 40px rgb(255, 153, 0);
 }
 #vipl1:hover {
     transform: scale(1.02);
@@ -386,7 +387,7 @@ a {
     box-shadow: 0px 0px 40px rgba(255, 136, 0, 0.63);
 }
 #vipl2:hover  #viplTop{
-    box-shadow: 0px 0px 40px rgb(255, 230, 0);
+    box-shadow: 0px 0px 40px rgba(255, 153, 0, 0.74);
 }
 #vipl1:hover  #viplTop{
     box-shadow: 0px 0px 40px rgb(183, 0, 255);
@@ -475,7 +476,7 @@ h5 {
 
 #buttonVipl2 {
     float: right;
-    background-color: rgb(255, 230, 0);
+    background-color: rgb(255, 153, 0);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
     width: 100px;
     height: 50px;
@@ -510,7 +511,7 @@ h5 {
 }
 
 #buttonVipl2:hover {
-    box-shadow: 0px 0px 10px rgb(255, 238, 0);
+    box-shadow: 0px 0px 10px rgb(255, 136, 0);
     border-radius: 10px;
 }
 
