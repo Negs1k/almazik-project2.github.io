@@ -247,8 +247,9 @@ h1 {
 }
 
 #block21 p2 {
-    color: yellow;
-    text-shadow: 0 0 2px yellow;
+    color: rgb(255, 153, 0);
+    text-shadow: 0 0 2px rgb(212, 127, 0);
+    font-weight: 400;
 }
 
 #block21 p3 {
