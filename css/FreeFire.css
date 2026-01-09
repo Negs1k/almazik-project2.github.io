@@ -17,7 +17,6 @@ body {
 
 h1 {
     text-align: left;
-    padding-top: 60px;
     padding-left: 70px;
     font-size: 50px;
 }
@@ -32,9 +31,7 @@ body.dark-theme {
     background-color: #121212;
     color: #e0e0e0;
 }
-body.dark-theme .fa-solid {
-    color: rgb(255, 255, 255);
-}
+
 body.dark-theme #block3,
 body.dark-theme #block3-2,
 body.dark-theme #block4,
@@ -120,9 +117,9 @@ body.dark-theme .fa-youtube:hover {
 
 #block21 h1 {
     text-align: left;
-    padding-top: 60px;
     padding-left: 50px;
     font-size: 50px;
+    margin-top: -10px;
 }
 
 #block21 h2 {
@@ -453,7 +450,7 @@ h5 {
 .fa-solid {
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-top: 3px;
+    margin-top: 15px;
     margin-left: -2px;
 }
 
@@ -469,10 +466,6 @@ h5 {
     right: 20px;
     text-align: center;
     margin-top: -20px;
-}
-
-#buttonVip1:hover .fa-solid {
-    color: rgb(241, 241, 241);
 }
 
 #buttonVip1:hover {
@@ -526,18 +519,10 @@ h5 {
     border-radius: 10px;
 }
 
-#buttonVipl2 .fa-solid {
+#buttonVipl2 .fa-solid, #buttonVipl1 .fa-solid{
     color: rgb(0, 0, 0);
     font-size: 25px;
-    margin-top: 0px;
-    margin-left: 12px;
-}
-
-#buttonVipl1 .fa-solid {
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-    margin-top: 0px;
-    margin-left: 12px;
+    margin-top: 15px;
 }
 
 li {
@@ -556,6 +541,12 @@ li {
     float: center;
     margin-top: 220px;
     z-index: 20;
+}
+
+#block21-1 {
+    float: left;
+    height: 30cap;
+    width: 90cap;
 }
 
 #block3 {
@@ -799,4 +790,134 @@ li {
 
 #cont4 {
     margin-left: -170px;
+}
+
+
+@media (max-width: 1000px) {
+
+    #block21 {
+        height: 50cap;
+        width: 120cap;
+        margin-top: 220px;
+        z-index: 20;
+    }
+
+    #block21-1 {
+        height: 50cap;
+        width: 120cap;
+        z-index: 20;
+    }
+
+    #block21 h1 {
+        font-size: 100px;
+        margin-top: 20px;
+    }
+
+    #block21 h2 {
+        font-size: 50px;
+    }
+
+    #block3 {
+        height: 170cap;
+        width: 120cap;
+    }
+
+    #block3-2 {
+        height: 80cap;
+        width: 120cap;
+    }
+
+    #block3-2 h3 {
+        font-size: 40px;
+    }
+
+    #viplTop h4 {
+        font-size: 40px;
+        margin-top: -40px;
+    }
+
+    #viplTop h5 {
+        font-size: 35px;
+        margin-top: -40px;
+    }
+
+    #vip1, #vip2, #vip3, #vip4, #vip5, #vip6 {
+        height: 340px;
+        width: 500px;
+        margin: 90px;
+    }
+
+    #vip4 {
+        margin-top: 150px;
+        margin-left: 180px;
+    }
+
+    #vip5, #vip6 {
+        margin-top: 150px;
+    }
+
+    #vipTop {
+        height: 35%;
+        width: 100%;
+        margin-top: 340px;
+    }
+
+    #vipl1, #vipl2 {
+        height: 440px;
+        width: 600px;
+        margin: 110px 20px 0px 45px;
+        background-position: 0px -140px;
+    }
+
+    #viplTop {
+        height: 40%;
+        width: 100%;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.192);
+        margin-top: 380px;
+    }
+
+    #buttonVipl2 {
+        width: 170px;
+        height: 70px;
+        margin-top: -80px;
+    }
+
+    #buttonVipl1 {
+        width: 170px;
+        height: 70px;
+        margin-top: -80px;
+    }
+
+    #buttonVipl2 .fa-solid, #buttonVipl1 .fa-solid{
+        color: rgb(0, 0, 0);
+        font-size: 35px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+    h4 {
+        font-size: 30px;
+        margin-top: -60px;
+    }
+
+    h5 {
+        font-size: 28px;
+        margin-top: -30px;
+    }
+
+    #buttonVip1 {
+        width: 120px;
+        height: 50px;
+        margin-top: -45px;
+    }
+
+    .fa-solid {
+        font-size: 26px;
+    }
 }

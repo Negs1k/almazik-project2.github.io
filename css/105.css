@@ -529,3 +529,16 @@ li {
 #cont4 {
     margin-left: -170px;
 }
+
+
+@media (max-width: 1000px) {
+
+    #footer1 {
+        height: 60cap;
+        width: 120cap;
+        margin-top: 10cap;
+        border-radius: 0px;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+    }
+}

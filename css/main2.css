@@ -15,7 +15,7 @@ body.dark-theme {
     color: #e0e0e0;
 }
 
-body.dark-theme #block2,
+body.dark-theme #block21,
 body.dark-theme #block3,
 body.dark-theme #block4,
 body.dark-theme #footer {
@@ -73,7 +73,7 @@ h1 {
     font-size: 70px;
 }
 
-#block2 h1 {
+#block21 h1 {
     font-size: 85px;
 }
 
@@ -217,10 +217,10 @@ body.dark-theme #header:hover #avtarization:hover {
     top: -30px;
 }
 
-#block2 {
+#block21 {
     display: block;
     background-color: rgb(255, 255, 255);
-    height: 20cap;
+    height: 40cap;
     width: 120cap;
     border-radius: 60px;
     text-align: center;
@@ -318,9 +318,6 @@ body.dark-theme #header:hover #avtarization:hover {
 .class5Img:hover {
     transform: perspective(600px) rotateX(30deg) rotate(15deg) scale(1.05);
 }
-
-
-
 
 #block3 {
     display: block;
@@ -606,4 +603,77 @@ body.dark-theme .fa-youtube:hover {
 
 #cont4 {
     margin-left: -170px;
+}
+
+
+@media (max-width: 1000px) {
+    
+    #block2-cart {
+        height: 60cap;
+        width: 60cap;
+        margin-top: -350px;
+    }
+
+    #block21 {
+        height: 50cap;
+        width: 120cap;
+    }
+
+    .textq h1 {
+        position: absolute;
+        left: 50%;
+        font-size: 70px;
+    }
+
+    #block3 {
+        height: 140cap;
+        width: 120cap;
+        margin-top: 220px;
+    }
+
+    .blockff, .block11, .block22, .block33, .block44, .block55 {
+        height: 400px;
+        width: 400px;
+        margin-top: 100px;
+        margin-left: 190px;
+    }
+
+    #block3 p {
+        margin-top: 410px;
+        font-size: 54px;
+    }
+
+    #block4 {
+        height: 200cap;
+        width: 120cap;
+        margin-top: 150px;
+    }
+
+    #block4 h1 {
+        font-size: 90px;
+    }
+
+    #block4 h2 {
+        font-size: 60px;
+        font-weight: 500;
+    }
+
+    #block4-2 {
+        height: 120cap;
+        width: 120cap;
+    }
+
+    #block4-2 h1 {
+        padding-top: 60px;
+    }
+
+    #block4-img {
+        position: absolute;
+        height: 80cap;
+        width: 80cap;
+        border-radius: 60px;
+        margin-top: 110cap;
+        margin-left: 230px;
+    }
+    
 }
