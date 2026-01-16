@@ -284,3 +284,160 @@ document.addEventListener('DOMContentLoaded', function() {
     initTheme();
     checkAuthStatus();
 });
+
+
+let isFavoritesOpen = false;
+
+function toggleFavoritesSidebar() {
+    const favoritesSidebar = document.getElementById('favoritesSidebar');
+    const favoritesOverlay = document.getElementById('favoritesOverlay');
+    const body = document.body;
+    
+    isFavoritesOpen = !isFavoritesOpen;
+    
+    if (isFavoritesOpen) {
+        favoritesSidebar.classList.add('active');
+        favoritesOverlay.classList.add('active');
+        body.classList.add('sidebar-open');
+        loadFavorites();
+    } else {
+        favoritesSidebar.classList.remove('active');
+        favoritesOverlay.classList.remove('active');
+        body.classList.remove('sidebar-open');
+    }
+}
+
+function loadFavorites() {
+    const favoritesContent = document.getElementById('favoritesContent');
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+    if (favorites.length === 0) {
+        favoritesContent.innerHTML = `
+            <div class="favorites-empty">
+                <i class="fas fa-star"></i>
+                <p>В избранном пока пусто</p>
+                <p>Добавляйте товары, нажимая на звёздочку</p>
+            </div>
+        `;
+    } else {
+        let html = '<div class="favorites-list">';
+        
+        favorites.forEach((item, index) => {
+            html += `
+                <div class="favorite-item" data-id="${item.id}">
+                    <div class="favorite-item-header">
+                        <div class="favorite-item-title">${item.name}</div>
+                        <button class="remove-favorite" onclick="removeFromFavorites(${index})">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="favorite-item-details">${item.description || 'Игровой донат'}</div>
+                    <div class="favorite-item-price">${item.price} ₽</div>
+                    <button class="buy-favorite-btn" onclick="buyFavoriteItem(${index})">
+                        Купить сейчас
+                    </button>
+                </div>
+            `;
+        });
+        
+        html += `</div>
+            <div class="favorites-footer">
+                <button class="clear-all-favorites" onclick="clearAllFavorites()">
+                    Очистить всё избранное
+                </button>
+            </div>`;
+        
+        favoritesContent.innerHTML = html;
+    }
+}
+
+function addToFavorites(item) {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+    if (!favorites.some(fav => fav.id === item.id)) {
+        favorites.push(item);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        showNotification('Товар добавлен в избранное', 'success');
+        
+        updateFavoritesCounter();
+    } else {
+        showNotification('Товар уже в избранном', 'info');
+    }
+}
+
+function removeFromFavorites(index) {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+    if (index >= 0 && index < favorites.length) {
+        favorites.splice(index, 1);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        loadFavorites();
+        updateFavoritesCounter();
+        showNotification('Товар удалён из избранного', 'info');
+    }
+}
+
+function clearAllFavorites() {
+    if (confirm('Вы уверены, что хотите очистить всё избранное?')) {
+        localStorage.removeItem('favorites');
+        loadFavorites();
+        updateFavoritesCounter();
+        showNotification('Избранное очищено', 'info');
+    }
+}
+
+function buyFavoriteItem(index) {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+    if (index >= 0 && index < favorites.length) {
+        const item = favorites[index];
+        showNotification(`Покупка товара: ${item.name}`, 'info');
+    }
+}
+
+function updateFavoritesCounter() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoritesToggle = document.getElementById('favoritesToggle');
+    
+    if (favorites.length > 0) {
+        let counter = favoritesToggle.querySelector('.favorites-counter');
+        
+        if (!counter) {
+            counter = document.createElement('div');
+            counter.className = 'favorites-counter';
+            counter.style.cssText = `
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                background: #ff4757;
+                color: white;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            `;
+            favoritesToggle.appendChild(counter);
+        }
+        
+        counter.textContent = favorites.length;
+    } else {
+        const counter = favoritesToggle.querySelector('.favorites-counter');
+        if (counter) {
+            counter.remove();
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateFavoritesCounter();
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && isFavoritesOpen) {
+            toggleFavoritesSidebar();
+        }
+    });
+});

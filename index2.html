@@ -88,9 +88,29 @@
     
     <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
+    <div id="Toggle">
     <button id="sidebarToggle" onclick="toggleSidebar()">
         <i class="fas fa-bars"></i>
     </button>
+
+    <button id="favoritesToggle" onclick="toggleFavoritesSidebar()">
+        <i class="fas fa-star"></i>
+    </button>
+    </div>
+
+    <div id="favoritesSidebar">
+    <div class="favorites-header">
+        <button class="close-favorites" onclick="toggleFavoritesSidebar()">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2>Избранное</h2>
+    </div>
+    
+    <div id="favoritesContent">
+    </div>
+    </div>
+
+    <div id="favoritesOverlay" onclick="toggleFavoritesSidebar()"></div>
 
     <div id="header">
         <div id="avatar"><p class="karamelka">Almazik</p></div>
@@ -103,7 +123,7 @@
     </div>
 
     <div id="block21" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <h1 data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">Каталог <b>доната</b> <li data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">и <b>ресурсов</b></li><li data-aos="fade-right" data-aos-duration="800" data-aos-delay="600">для <b>игр!</b></li></h1>
+        <h1 data-aos="fade-right" data-aos-duration="800" data-aos-delay="400"> Центр <b>выгодных</b> <li data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">предложений: </li><li data-aos="fade-right" data-aos-duration="800" data-aos-delay="600"><b>доната</b> и <b>ресурсы</b></li><li data-aos="fade-right" data-aos-duration="800" data-aos-delay="700">для <b>любимых</b> игр  </li></h1>
         <div id="block2-cart">
             <div class="class2Img"></div>
             <div class="class3Img"></div>
@@ -115,12 +135,9 @@
     <li class="textq" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><h1>Каталог <b>игр:</b></h1></li>
 
     <div id="block3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <a href="FreeFire.html"><div class="blockff" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><p>Free Fire</p></div></a>
         <div class="block11" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500"><p></p></div>
+        <a href="FreeFire.html"><div class="blockff" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><p>Free Fire</p></div></a>
         <div class="block22" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600"><p></p></div>
-        <div class="block33" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="700"><p></p></div>
-        <div class="block44" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="800"><p></p></div>
-        <div class="block55" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900"><p></p></div>
     </div>
 
     <div id="block4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">

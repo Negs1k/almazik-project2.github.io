@@ -2,14 +2,6 @@
     padding: 0;
 }
 
-body {
-    background-color: rgb(236, 236, 236);
-    font-family: "Roboto", sans-serif;
-    font-weight: 800;
-    width: 120cap;
-    margin: auto;
-}
-
 body.dark-theme {
     background-color: #121212;
     color: #e0e0e0;
@@ -39,29 +31,19 @@ body.dark-theme h1 b {
 body.dark-theme #block3 p {
     color: #e0e0e0;
 }
-body.dark-theme .block11,
-body.dark-theme .block22,
-body.dark-theme .block33,
-body.dark-theme .block44,
-body.dark-theme .block55 {
-    background-color: #121212;
-}
-
-body.dark-theme .block11:hover,
-body.dark-theme .block22:hover,
-body.dark-theme .block33:hover,
-body.dark-theme .block44:hover,
-body.dark-theme .block55:hover {
-    box-shadow: 0px 0px 25px rgba(211, 0, 0, 0.5);
-}
 
 body.dark-theme .blockff:hover {
     box-shadow: 0px 0px 25px rgb(238, 112, 255);
 }
 
+body.dark-theme .block11,
+body.dark-theme .block22 {
+    background-color: #161616;
+}
+
 h1 {
     text-align: left;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-left: 70px;
     font-size: 75px;
 }
@@ -74,7 +56,7 @@ h1 {
 }
 
 #block21 h1 {
-    font-size: 85px;
+    font-size: 70px;
 }
 
 h2 {
@@ -220,7 +202,7 @@ body.dark-theme #header:hover #avtarization:hover {
 #block21 {
     display: block;
     background-color: rgb(255, 255, 255);
-    height: 40cap;
+    height: 44cap;
     width: 120cap;
     border-radius: 60px;
     text-align: center;
@@ -322,37 +304,56 @@ body.dark-theme #header:hover #avtarization:hover {
 #block3 {
     display: block;
     background-color: rgb(255, 255, 255);
-    height: 70cap;
+    height: 60cap;
     width: 120cap;
     border-radius: 60px;
     text-align: center;
     margin: auto;
     float: center;
-    margin-top: 0;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.199);
 }
 
-.blockff, .block11, .block22, .block33, .block44, .block55 {
-    background-color: rgb(255, 0, 0);
-    height: 250px;
-    width: 250px;
+.blockff {
+    height: 450px;
+    width: 450px;
     border-radius: 60px;
     text-align: center;
     margin: auto;
     float: left;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
-    transition: box-shadow 0.4s ease, transform 0.3s ease;
-    margin-top: 100px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 150px;
+    margin-top: 10cap;
+}
+
+.block11, .block22 {
+    float: left;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
+    border-radius: 40%;
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/+.png);
+    height: 250px;
+    width: 250px;
+    background-color: #ffffff;
+    margin-top: 20cap;
+    margin-right: 10cap;
+    margin-left: 8cap;
+}
+
+.block22 {
+    background-color: #ffffff;
+    margin-top: 20cap;
+    margin-left: 10cap;
+    margin-right: 0cap;
 }
 
 #block3 p {
     float: center;
-    margin-top: 270px;
-    color: white;
+    margin-top: 470px;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -362,32 +363,8 @@ body.dark-theme #header:hover #avtarization:hover {
     background-image: url(../img/pictureff.png);
 }
 
-.block11 {
-    background-color: #191919;
-}
-
-.block22 {
-    background-color: #2a2a2a;
-}
-
-.block33 {
-    background-color: #1a1a1a;
-}
-
-.block44 {
-    background-color: #252525;
-}
-
-.block55 {
-    background-color: #2d2d2d;
-}
-
 .blockff:hover {
     box-shadow: 0px 0px 25px rgb(238, 112, 255);
-}
-
-.block11:hover, .block22:hover, .block33:hover, .block44:hover, .block55:hover {
-    box-shadow: 0px 0px 25px rgb(255, 0, 0);
 }
 
 #block4 {
@@ -626,20 +603,49 @@ body.dark-theme .fa-youtube:hover {
     }
 
     #block3 {
-        height: 140cap;
+        height: 80cap;
         width: 120cap;
         margin-top: 220px;
     }
 
-    .blockff, .block11, .block22, .block33, .block44, .block55 {
-        height: 400px;
-        width: 400px;
-        margin-top: 100px;
-        margin-left: 190px;
+    .blockff {
+        height: 450px;
+        width: 450px;
+        border-radius: 60px;
+        text-align: center;
+        margin: auto;
+        float: left;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 20cap;
+    }
+
+    .block11, .block22 {
+        float: left;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
+        border-radius: 40%;
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/+.png);
+        height: 250px;
+        width: 250px;
+        background-color: #ffffff;
+        margin-top: 30cap;
+        margin-right: 10cap;
+        margin-left: 8cap;
+    }
+
+    .block22 {
+        background-color: #ffffff;
+        margin-left: 10cap;
+        margin-right: 0cap;
     }
 
     #block3 p {
-        margin-top: 410px;
+        margin-top: 480px;
         font-size: 54px;
     }
 

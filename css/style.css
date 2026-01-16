@@ -33,14 +33,14 @@ h2 {
 #pm {
     height: 20cap;
     width: 120cap;
-    text-align: center;
     margin: auto;
-    float: center;
 }
 
 .pm {
+    text-align: center;
     font-size: 100px;
     padding-top: 60px;
+    padding-left: 0;
 }
 
 #footertextconteiner b{
@@ -110,7 +110,7 @@ b1 {
 }
 
 #nav a:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 211, 112);
 }
 
 #nav a:hover::before {
@@ -481,8 +481,8 @@ body.dark-theme .fa-youtube:hover {
 }
 
 #sidebarToggle {
-    position: fixed;
-    margin-top: -150px;
+    float: left;
+    margin-top: 3px;
     width: 75px;
     height: 75px;
     background-color: rgba(255, 255, 255, 0.719);
@@ -503,7 +503,6 @@ body.dark-theme .fa-youtube:hover {
 #sidebarToggle:hover {
     background: white;
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-header {
@@ -747,10 +746,23 @@ body.dark-theme #header {
     color: #e0e0e0;
 }
 
+body.dark-theme #header:hover #avtarization:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.603);
+}
+
 body.dark-theme #header #avtarization {
     background-color: rgba(40, 40, 40, 0.527);
     color: #e0e0e0bd;
     border: 2px solid #e0e0e09a;
+}
+
+#header:hover #avtarization:hover {
+    transform: scale(1.02);
+    color: rgb(0, 0, 0);
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.603);
 }
 
 body.dark-theme #nav a {
@@ -758,7 +770,7 @@ body.dark-theme #nav a {
 }
 
 body.dark-theme #nav a:hover {
-    color: #ffffff;
+    color: rgba(0, 211, 112);
 }
 
 body.dark-theme #footertextconteiner {
@@ -789,6 +801,234 @@ body.dark-theme .sidebar-link .theme-status {
 b {
     text-shadow: 
         0 0 20px rgba(0, 211, 112, 0.4);
+}
+
+#Toggle {
+    position: fixed;
+    top: 70px;
+    width: 120cap;
+    height: 80px;
+}
+
+#favoritesToggle {
+    margin-top: 3px;
+    float: right;
+    width: 75px;
+    height: 75px;
+    background-color: rgba(255, 255, 255, 0.719);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 40%;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#favoritesToggle:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+#favoritesSidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#favoritesSidebar.active {
+    right: 0;
+}
+
+#favoritesOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.199);
+    z-index: 999;
+    display: none;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+#favoritesOverlay.active {
+    display: block;
+}
+
+.favorites-header {
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.favorites-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffd700;
+}
+
+.close-favorites {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.close-favorites:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.favorites-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.favorites-empty i {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.favorites-empty p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.favorites-list {
+    padding: 20px;
+}
+
+.favorite-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.favorite-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #ffd700;
+}
+
+.favorite-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.favorite-item-title {
+    font-weight: 600;
+    color: #ffd700;
+    font-size: 16px;
+}
+
+.remove-favorite {
+    background: rgba(220, 53, 69, 0.3);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.remove-favorite:hover {
+    background: #dc3545;
+    transform: scale(1.1);
+}
+
+.favorite-item-details {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.favorite-item-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00d370;
+}
+
+.buy-favorite-btn {
+    width: 100%;
+    padding: 8px;
+    background: #00d370;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.buy-favorite-btn:hover {
+    background: #00b894;
+    transform: translateY(-2px);
+}
+
+.favorites-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.clear-all-favorites {
+    width: 100%;
+    padding: 12px;
+    background: rgba(220, 53, 69, 0.3);
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.clear-all-favorites:hover {
+    background: rgba(220, 53, 69, 0.5);
+}
+
+body.dark-theme #favoritesToggle {
+    background-color: rgba(30, 30, 30, 0.719);
+    color: #e0e0e0;
+}
+
+body.dark-theme #favoritesToggle:hover {
+    background: #2d2d2d;
 }
 
 @media (max-width: 1000px) {
@@ -828,7 +1068,8 @@ b {
         text-align: center;
         margin: auto;
         float: center;
-        margin-top: 200px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     
     .pm {
@@ -947,7 +1188,7 @@ b {
     #header .fa-solid {
         position: absolute;
         margin: auto;
-        top: 33px;
+        top: 29px;
         left: 20px;
     }
 
@@ -965,7 +1206,6 @@ b {
     }
 
     #sidebarToggle {
-        margin-top: -150px;
         width: 110px;
         height: 110px;
         font-size: 34px;
@@ -1064,6 +1304,85 @@ b {
 
     .social-icons {
         gap: 60px;
+    }
+
+    #favoritesToggle {
+        width: 110px;
+        height: 110px;
+        font-size: 34px;
+        right: 0px;
+    }
+    
+    #favoritesSidebar {
+        right: -1000px;
+        width: 700px;
+    }
+    
+    .favorites-header {
+        padding: 45px 30px;
+    }
+    
+    .favorites-header h2 {
+        font-size: 60px;
+    }
+    
+    .close-favorites {
+        font-size: 60px;
+    }
+    
+    .favorites-empty {
+        padding: 80px 20px;
+    }
+    
+    .favorites-empty i {
+        font-size: 120px;
+        margin-bottom: 40px;
+    }
+    
+    .favorites-empty p {
+        font-size: 32px;
+    }
+    
+    .favorites-list {
+        padding: 40px;
+    }
+    
+    .favorite-item {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .favorite-item-title {
+        font-size: 32px;
+    }
+    
+    .remove-favorite {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    .favorite-item-details {
+        font-size: 28px;
+    }
+    
+    .favorite-item-price {
+        font-size: 36px;
+    }
+    
+    .buy-favorite-btn {
+        padding: 20px;
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    
+    .favorites-footer {
+        padding: 40px;
+    }
+    
+    .clear-all-favorites {
+        padding: 30px;
+        font-size: 28px;
     }
 
 }

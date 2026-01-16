@@ -32,6 +32,11 @@ body.dark-theme {
     color: #e0e0e0;
 }
 
+
+body.dark-theme .fa-solid {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 body.dark-theme #block3,
 body.dark-theme #block3-2,
 body.dark-theme #block4,

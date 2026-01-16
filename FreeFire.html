@@ -88,9 +88,29 @@
     
     <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
+    <div id="Toggle">
     <button id="sidebarToggle" onclick="toggleSidebar()">
         <i class="fas fa-bars"></i>
     </button>
+
+    <button id="favoritesToggle" onclick="toggleFavoritesSidebar()">
+        <i class="fas fa-star"></i>
+    </button>
+    </div>
+
+    <div id="favoritesSidebar">
+    <div class="favorites-header">
+        <button class="close-favorites" onclick="toggleFavoritesSidebar()">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2>Избранное</h2>
+    </div>
+    
+    <div id="favoritesContent">
+    </div>
+    </div>
+
+    <div id="favoritesOverlay" onclick="toggleFavoritesSidebar()"></div>
 
     <div id="header">
         <div id="avatar"><p class="karamelka">Almazik</p></div>
