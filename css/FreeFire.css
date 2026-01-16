@@ -923,7 +923,10 @@ li {
         margin-top: -45px;
     }
 
-    .fa-solid {
-        font-size: 26px;
+    #header .fa-solid {
+        position: absolute;
+        margin: auto;
+        top: 31px;
+        left: 20px;
     }
 }

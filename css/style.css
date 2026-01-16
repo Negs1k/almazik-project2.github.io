@@ -1071,10 +1071,6 @@ body.dark-theme #favoritesToggle:hover {
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    
-    .pm {
-        padding: 100px;
-    }
 
     #footertextconteiner {
         height: 350cap;
@@ -1188,7 +1184,7 @@ body.dark-theme #favoritesToggle:hover {
     #header .fa-solid {
         position: absolute;
         margin: auto;
-        top: 29px;
+        top: 31px;
         left: 20px;
     }
 
