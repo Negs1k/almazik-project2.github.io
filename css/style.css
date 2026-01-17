@@ -970,6 +970,7 @@ b {
     #nav {
         margin-top: 30px;
         font-size: 30px;
+        word-spacing: 1.5cap;
     }
 
     #nav a {
