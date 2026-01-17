@@ -36,11 +36,6 @@ body.dark-theme .blockff:hover {
     box-shadow: 0px 0px 25px rgb(238, 112, 255);
 }
 
-body.dark-theme .block11,
-body.dark-theme .block22 {
-    background-color: #161616;
-}
-
 h1 {
     text-align: left;
     padding-top: 30px;
@@ -115,8 +110,8 @@ body.dark-theme #header #avtarization {
     display: block;
     text-align: center;
     padding-top: 10px;
-    word-spacing: 5cap;
     font-size: 20px;
+    right: 25px;
 }
 
 #nav a:hover {
@@ -317,69 +312,47 @@ body.dark-theme #header:hover #avtarization:hover {
 }
 
 #block3 {
-    display: block;
     background-color: rgb(255, 255, 255);
-    height: 60cap;
+    height: 80cap;
     width: 120cap;
     border-radius: 60px;
-    text-align: center;
-    margin: auto;
-    float: center;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.199);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .blockff {
     height: 450px;
     width: 450px;
     border-radius: 60px;
-    text-align: center;
-    margin: auto;
-    float: left;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 10cap;
-}
-
-.block11, .block22 {
-    float: left;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
-    border-radius: 40%;
-    background-size: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../img/+.png);
-    height: 250px;
-    width: 250px;
-    background-color: #ffffff;
-    margin-top: 20cap;
-    margin-right: 10cap;
-    margin-left: 8cap;
-}
-
-.block22 {
-    background-color: #ffffff;
-    margin-top: 20cap;
-    margin-left: 10cap;
-    margin-right: 0cap;
+    background-image: url(../img/pictureff.png);
+    transition: all 0.4s ease;
 }
 
 #block3 p {
-    float: center;
-    margin-top: 470px;
+    position: relative;
     color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-
-.blockff {
-    background-image: url(../img/pictureff.png);
+    text-align: center;
+    top: 470px;
+    width: 100%;
 }
 
 .blockff:hover {
     box-shadow: 0px 0px 25px rgb(238, 112, 255);
+    transform: translateY(-5px);
+}
+
+body.dark-theme #block3 p {
+    color: #e0e0e0;
 }
 
 #block4 {
@@ -634,33 +607,10 @@ body.dark-theme .fa-youtube:hover {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        margin-top: 20cap;
-    }
-
-    .block11, .block22 {
-        float: left;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.568);
-        border-radius: 40%;
-        background-size: 100px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url(../img/+.png);
-        height: 250px;
-        width: 250px;
-        background-color: #ffffff;
-        margin-top: 30cap;
-        margin-right: 10cap;
-        margin-left: 8cap;
-    }
-
-    .block22 {
-        background-color: #ffffff;
-        margin-left: 10cap;
-        margin-right: 0cap;
     }
 
     #block3 p {
-        margin-top: 480px;
+        margin-top: 0;
         font-size: 54px;
     }
 

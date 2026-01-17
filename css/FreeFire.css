@@ -169,8 +169,8 @@ h1 b{
     display: block;
     text-align: center;
     padding-top: 10px;
-    word-spacing: 5cap;
     font-size: 20px;
+    right: 25px;
 }
 
 #nav a:hover {
