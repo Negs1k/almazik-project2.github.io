@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="negsik">
+    <title>Almazik - Free Fire</title>
+    <link rel="stylesheet" href="css/FreeFire.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Меню</h2>
+        </div>
+        
+        <div class="sidebar-profile" id="sidebarProfile">
+            <div class="profile-avatar" id="sidebarAvatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-info">
+                <h3 id="sidebarUsername">Гость</h3>
+                <p id="sidebarEmail">Войдите в аккаунт</p>
+            </div>
+            <button class="btn-login" onclick="goToAuth()" id="sidebarLoginBtn">
+                <i class="fas fa-sign-in-alt"></i> Войти
+            </button>
+            <button class="btn-logout" onclick="logout()" id="sidebarLogoutBtn" style="display: none;">
+                <i class="fas fa-sign-out-alt"></i> Выйти
+            </button>
+        </div>
+
+        <div class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <i class="fas fa-home"></i> Главная
+            </a>
+            <a href="index2.html" class="sidebar-link">
+                <i class="fas fa-store"></i> Каталог
+            </a>
+            <a href="index3.html" class="sidebar-link">
+                <i class="fas fa-comment"></i> Отзывы
+            </a>
+            <a href="FreeFire.html" class="sidebar-link active">
+                <i class="fas fa-gamepad"></i> Free Fire
+            </a>
+            <a href="html/support.html" class="sidebar-link">
+                <i class="fas fa-headset"></i> Поддержка
+            </a>
+        </div>
+        
+        <div class="sidebar-section">
+            <h4>Мои заказы</h4>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-shopping-cart"></i> История покупок
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-star"></i> Избранное
+            </a>
+        </div>
+        
+        <div class="sidebar-section">
+            <h4>Настройки</h4>
+            <a href="javascript:void(0)" class="sidebar-link" onclick="openUserProfile()">
+                <i class="fas fa-user-cog"></i> Профиль
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bell"></i> Уведомления
+            </a>
+            <a href="javascript:void(0)" class="sidebar-link theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i> Тема
+                <span class="theme-status" id="themeStatus">Светлая</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-footer">
+            <p>© 2024–2025 Almazik</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <div id="Toggle">
+    <button id="sidebarToggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+    </div>
+
+    <div id="header">
+        <div id="avatar"><p class="karamelka">Almazik</p></div>
+        <div id="avtarization"><i class="fa-solid fa-user"></i><a href="firebase/reg.html"><h3>Авторизация</h3></a></div>
+        <ul id="nav">
+            <a href="index.html">Главная</a>
+            <a href="index2.html">Каталог</a>
+            <a href="index3.html">Отзывы</a>
+            <a href="support.html">Поддержка</a>
+        </ul>
+    </div>
+    
+    <div id="block21">
+        <div id="block21-1"><h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">Каталог <b>сервисов</b> и <b>игр</b></h1>
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="150">Пополнение алмазов Free Fire по самым выгодным ценам! Быстрая доставка, безопасные платежи и круглосуточная поддержка для всех игроков.</h2>
+    </div>
+    </div>
+
+    <div id="block3">
+      <a href="html/105.html">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="100">
+        <div id="vip1">
+        <div id="vipTop">
+        <h3><b>105</b> алмазов</h3>
+        <h4>Цена:</h4>
+        <h5>75₽</h5>
+        <div id="buttonVip1"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+      </div>
+    </div></a>
+    <a href="html/326.html"><div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="100">
+        <div id="vip2">
+        <div id="vipTop">
+        <h3><b>326</b> алмазов</h3>
+        <h4>Цена:</h4>
+        <h5>225₽</h5>
+        <div id="buttonVip1"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+      </div>
+    </div></a>
+    <a href="html/546.html"><div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-offset="100">
+        <div id="vip3">
+        <div id="vipTop">
+        <h3><b>546</b> алмазов</h3>
+        <h4>Цена:</h4>
+        <h5>375₽</h5>
+        <div id="buttonVip1"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+    </div>
+    </div></a>
+    
+    <a href="html/1113.html">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="100">
+      <div id="vip4">
+        <div id="vipTop">
+        <h3><b>1113</b> алмазов</h3>
+        <h4>Цена:</h4>
+        <h5>750₽</h5>
+        <div id="buttonVip1"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+    </div>
+    </div></a>
+    <a href="html/2398.html"><div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
+      <div id="vip5">
+        <div id="vipTop">
+        <h3><b>2398</b> алмазов</h3>
+        <h4>Цена:</h4>
+        <h5>1500₽</h5>
+        <div id="buttonVip1"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+      </div>
+    </div></a>
+    <a href="html/6160.html"><div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-offset="100">
+      <div id="vip6">
+        <div id="vipTop">
+        <h3><b>6160</b> алмазов</h3>
+        <h4>Цена:</h4>
+        <h5>3600₽</h5>
+        <div id="buttonVip1"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+        </div>
+        </div></a>
+    </div>
+
+    <div id="block3-2">
+        <h6 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">Магазин <b>ваучеров</b></h6>
+      <a href="html/Vaun2.html">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="100">
+        <div id="vipl1">
+        <div id="viplTop">
+        <h3><p3>Недельный</p3> ваучер</h3>
+        <h4>Цена:</h4>
+        <h5>120₽</h5>
+        <div id="buttonVipl1"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+      </div>
+    </div></a>
+    <a href="html/Vaun1.html"><div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="100">
+        <div id="vipl2">
+        <div id="viplTop">
+        <h3><p2>Месячный</p2> ваучер</h3>
+        <h4>Цена:</h4>
+        <h5>670₽</h5>
+        <div id="buttonVipl2"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+      </div>
+    </div></a>
+    </div>
+
+    <div id="block4">
+        <div id="block4-img"></div>
+        <div id="block4-2">
+            <li><h1>О пополнении <b>Free Fire</b></h1></li>
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="150"><h2>Алмазы - основная игровая валюта в  
+              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="150">Free Fire, которая позволяет покупать </li> 
+              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-offset="150">персонажей, скины, оружие и другие </li>
+              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-offset="150">внутриигровые предметы.</li></h2></li>
+
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="150"><h2>Мы предлагаем моментальную доставку  
+              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-offset="150">алмазов после оплаты. Для пополнения </li> 
+              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-offset="150">потребуется только ваш Player ID и </li>
+              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-offset="150">сервер игры.</li></h2></li>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="MenuImg"></div>
+        <h1 class="pm2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" data-aos-offset="200">О магазине <b>Almazik</b></h1>
+        <h1 class="pm3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" data-aos-offset="150">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
+        <h1 class="pm4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" data-aos-offset="150">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
+        <div id="Menu">
+            <div id="Seti">
+                <li id="cont1">
+                    <p>© 2025-2026 Almazik</p>
+                </li>
+                <li id="cont2">
+                    <p>Дизайнер Almazik</p>
+                </li>
+                <li id="cont3">
+                    <a href="index.html"><p>Главная</p></a>
+                </li>
+                <li id="cont4">
+                    <a href="index2.html"><p>Каталог</p></a>
+                </li>
+                <li class="icon">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </li>
+            </div>
+        </div>
+      </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB7fW_kXBKW-KaHo3ejfYyn-uvRRp-_Y-o",
+            authDomain: "website-project-8aeb4.firebaseapp.com",
+            projectId: "website-project-8aeb4",
+            storageBucket: "website-project-8aeb4.firebasestorage.app",
+            messagingSenderId: "559011064100",
+            appId: "1:559011064100:web:2d7c14f69a7138bbdf6bb1",
+            databaseURL: "https://website-project-8aeb4-default-rtdb.firebaseio.com"
+        };
+        if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+    </script>
+    <script>
+        AOS.init({
+            offset: -1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuthStatus();
+        });
+    </script>
+</body>
+</html>

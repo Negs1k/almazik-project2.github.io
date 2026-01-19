@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="negsik">
+    <title>Almazik - Магазин игрового доната</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Меню</h2>
+        </div>
+        
+        <div class="sidebar-profile" id="sidebarProfile">
+            <div class="profile-avatar" id="sidebarAvatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-info">
+                <h3 id="sidebarUsername">Гость</h3>
+                <p id="sidebarEmail">Войдите в аккаунт</p>
+            </div>
+            <button class="btn-login" onclick="goToAuth()" id="sidebarLoginBtn">
+                <i class="fas fa-sign-in-alt"></i> Войти
+            </button>
+            <button class="btn-logout" onclick="logout()" id="sidebarLogoutBtn" style="display: none;">
+                <i class="fas fa-sign-out-alt"></i> Выйти
+            </button>
+        </div>
+        
+        <div class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <i class="fas fa-home"></i> Главная
+            </a>
+            <a href="index2.html" class="sidebar-link">
+                <i class="fas fa-store"></i> Каталог
+            </a>
+            <a href="index3.html" class="sidebar-link">
+                <i class="fas fa-comment"></i> Отзывы
+            </a>
+            <a href="FreeFire.html" class="sidebar-link">
+                <i class="fas fa-gamepad"></i> Free Fire
+            </a>
+            <a href="html/support.html" class="sidebar-link">
+                <i class="fas fa-headset"></i> Поддержка
+            </a>
+        </div>
+        
+        <div class="sidebar-section">
+            <h4>Мои заказы</h4>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-shopping-cart"></i> История покупок
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-star"></i> Избранное
+            </a>
+        </div>
+        
+        <div class="sidebar-section">
+        <h4>Настройки</h4>
+        <a href="javascript:void(0)" class="sidebar-link" onclick="openUserProfile()">
+            <i class="fas fa-user-cog"></i> Профиль
+        </a>
+        <a href="#" class="sidebar-link">
+            <i class="fas fa-bell"></i> Уведомления
+        </a>
+        <a href="javascript:void(0)" class="sidebar-link theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i> Тема
+            <span class="theme-status" id="themeStatus">Светлая</span>
+        </a>
+    </div>
+        
+        <div class="sidebar-footer">
+            <p>© 2024–2025 Almazik</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <div id="Toggle">
+    <button id="sidebarToggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+    </div>
+
+    <div id="header">
+        <div id="avatar"><p class="karamelka">Almazik</p></div>
+        <div id="avtarization"><i class="fa-solid fa-user"></i><a href="firebase/reg.html"><h3>Авторизация</h3></a></div>
+        <ul id="nav">
+            <a href="index.html">Главная</a>
+            <a href="index2.html">Каталог</a>
+            <a href="index3.html">Отзывы</a>
+            <a href="html/support.html">Поддержка</a>
+        </ul>
+    </div>
+
+    <div id="block2" data-aos="fade-up" data-aos-duration="1000">
+        <div id="block2img"></div>
+            <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Добро пожаловать в<br><li data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">магазин <b>игрового доната!</b></li></h1>
+            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">Это лучший и надёжный магазин дешёвого доната для популярной игры Free Fire,где вы можете безопасно и быстропополнять алмазы и другие игровые ресурсы…</h2>
+    </div>
+    
+    <a href="index2.html" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400"><div id="blockgg">
+    </div></a>
+    </div>
+
+    <div id="pm">
+        <h1 class="pm" data-aos="fade-up" data-aos-duration="1000"><b>ПОЧЕМУ</b> ВЫБИРАЮТ <b>НАС?</b></h1>
+    </div>
+
+    <div id="footertextconteiner" data-aos="fade-up" data-aos-duration="500">
+    <div id="img1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    </div>
+    <div id="img2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    </div>
+    <div id="img3">
+        <p class="textImg1" data-aos="fade-left" data-aos-duration="1000"><b>Совершенная</b> система выдачи <b>товара</b></p>
+        <p class="textImg2" data-aos="fade-left" data-aos-duration="1000">Наша запатентованная система автоматической выдачи доната работает 24/7 без перерывов. Получите свой заказ в течение 1-3 минут после оплаты!</p>
+        <p class="textImg4" data-aos="fade-left" data-aos-duration="1000">Мы используем безопасные платежные системы и шифрование данных для защиты ваших транзакций. Все покупки защищены гарантией возврата.</p>
+    </div>
+    <div id="img4">
+        <p class="textImg3" data-aos="fade-right" data-aos-duration="1000">Сотни <b>постоянных</b> и <b>довольных</b> клиентов</p>
+        <p class="textImg4" data-aos="fade-right" data-aos-duration="1000">Более 50,000 игроков уже выбрали наш магазин для покупки доната. Наш рейтинг доверия составляет 4.9/5 на основе отзывов.</p>
+        <p class="textImg4" data-aos="fade-right" data-aos-duration="1000">Круглосуточная техническая поддержка всегда готова помочь с любыми вопросами. Среднее время ответа - 5 минут.</p>
+    </div>
+    </div>
+
+    <div id="footer">
+        <div id="MenuImg"></div>
+        <h1 class="pm2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">О магазине <b>Almazik</b></h1>
+        <h1 class="pm3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
+        <h1 class="pm4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
+        <div id="Menu">
+            <div id="Seti">
+                <li id="cont1">
+                    <p>© 2025-2026 Almazik</p>
+                </li>
+                <li id="cont2">
+                    <p>Дизайнер Almazik</p>
+                </li>
+                <li id="cont3">
+                    <a href="index.html"><p>Главная</p></a>
+                </li>
+                <li id="cont4">
+                    <a href="index2.html"><p>Каталог</p></a>
+                </li>
+                <li class="icon">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB7fW_kXBKW-KaHo3ejfYyn-uvRRp-_Y-o",
+            authDomain: "website-project-8aeb4.firebaseapp.com",
+            projectId: "website-project-8aeb4",
+            storageBucket: "website-project-8aeb4.firebasestorage.app",
+            messagingSenderId: "559011064100",
+            appId: "1:559011064100:web:2d7c14f69a7138bbdf6bb1",
+            databaseURL: "https://website-project-8aeb4-default-rtdb.firebaseio.com"
+        };
+        
+        if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+    </script>
+    <script>
+        AOS.init({
+            offset: -1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuthStatus();
+        });
+    </script>
+</body>
+
+</html>
