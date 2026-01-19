@@ -71,7 +71,7 @@ b1 {
     -webkit-backdrop-filter: blur(10px);
     height: 80px;
     width: 1143px;
-    border-radius: 50px;
+    border-radius: 20px;
     margin: auto;
     margin-top: -150px;
     transform: translateX(-50%);
@@ -489,7 +489,7 @@ body.dark-theme .fa-youtube:hover {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: none;
-    border-radius: 40%;
+    border-radius: 20px;
     color: #333;
     font-size: 24px;
     cursor: pointer;
@@ -502,7 +502,7 @@ body.dark-theme .fa-youtube:hover {
 
 #sidebarToggle:hover {
     background: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .sidebar-header {

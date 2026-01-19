@@ -1,12 +1,12 @@
 const firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: "",
-    databaseURL: ""
-};
+            apiKey: "AIzaSyB7fW_kXBKW-KaHo3ejfYyn-uvRRp-_Y-o",
+            authDomain: "website-project-8aeb4.firebaseapp.com",
+            projectId: "website-project-8aeb4",
+            storageBucket: "website-project-8aeb4.firebasestorage.app",
+            messagingSenderId: "559011064100",
+            appId: "1:559011064100:web:2d7c14f69a7138bbdf6bb1",
+            databaseURL: "https://website-project-8aeb4-default-rtdb.firebaseio.com"
+        };
 
 firebase.initializeApp(firebaseConfig);
 
