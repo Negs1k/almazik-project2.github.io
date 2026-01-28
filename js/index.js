@@ -441,3 +441,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.getElementById('footer_basket');
+    let lastScrollTop = 0;
+    let footerVisible = true;
+    const footerHeight = footer.offsetHeight;
+    
+    footer.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+        
+        const scrollFromTop = scrollTop;
+        
+        if (scrollDirection === 'down' && scrollFromTop > 100) {
+            const hidePercentage = Math.min(100, (scrollFromTop - 100) / 20);
+            const translateY = (hidePercentage / 100) * footerHeight;
+            
+            footer.style.transform = `translateY(${translateY}px)`;
+            footerVisible = translateY < footerHeight * 0.9;
+        } 
+        else if (scrollDirection === 'up' || scrollFromTop <= 100) {
+            const showPercentage = Math.max(0, 100 - scrollFromTop / 2);
+            const translateY = ((100 - showPercentage) / 100) * footerHeight;
+            
+            footer.style.transform = `translateY(${translateY}px)`;
+            footerVisible = true;
+        }
+        
+        if (scrollFromTop <= 50) {
+            footer.style.transform = 'translateY(0)';
+            footerVisible = true;
+        }
+        
+        lastScrollTop = scrollTop;
+    }
+    
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+});

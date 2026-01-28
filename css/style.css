@@ -64,8 +64,7 @@ b1 {
 }
 
 #header {
-    position: fixed;
-    left: 50%;
+    float: center;
     background-color: rgba(255, 255, 255, 0.719);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -73,16 +72,15 @@ b1 {
     width: 1143px;
     border-radius: 20px;
     margin: auto;
-    margin-top: -150px;
-    transform: translateX(-50%);
     z-index: 100;
+    margin-top: -20px;
 }
 
 #nav {
     list-style: none;
     display: block;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
     font-size: 20px;
 }
 
@@ -189,6 +187,19 @@ b1 {
     display: block;
     background-color: rgb(255, 255, 255);
     height: 40cap;
+    width: 120cap;
+    border-radius: 60px;
+    text-align: center;
+    margin: auto;
+    float: center;
+    margin-top: 220px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.199);
+}
+
+#basketblock {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    height: 200cap;
     width: 120cap;
     border-radius: 60px;
     text-align: center;
@@ -500,6 +511,66 @@ body.dark-theme .fa-youtube:hover {
     transition: all 0.3s ease;
 }
 
+#basketToggle {
+    float: right;
+    margin-top: 3px;
+    width: 75px;
+    height: 75px;
+    background-color: rgba(255, 255, 255, 0.719);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 20px;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#basketToggle:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+#basketToggle .olo {
+    background-color: red;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    bottom: 55px;
+    left: 55px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
 #sidebarToggle:hover {
     background: white;
     transform: scale(1.05);
@@ -794,6 +865,15 @@ body.dark-theme #sidebarToggle:hover {
     background: #2d2d2d;
 }
 
+body.dark-theme #basketToggle {
+    background-color: rgba(30, 30, 30, 0.719);
+    color: #e0e0e0;
+}
+
+body.dark-theme #basketToggle:hover {
+    background: #2d2d2d;
+}
+
 body.dark-theme .sidebar-link .theme-status {
     color: #00d370;
 }
@@ -808,6 +888,12 @@ b {
     top: 70px;
     width: 120cap;
     height: 80px;
+    z-index: 100;
+}
+
+#footer_basket {
+    position: absolute;
+    right: 200cap;
 }
 
 @media (max-width: 1000px) {
@@ -897,6 +983,7 @@ b {
         border-radius: 0px;
         border-top-left-radius: 60px;
         border-top-right-radius: 60px;
+        z-index: 100;
     }
 
     #Menu {
@@ -941,18 +1028,16 @@ b {
     }
 
     #header {
-        position: fixed;
-        left: 50%;
-        height: 120px;
+        margin-top: -25px;
+        height: 110px;
         width: 1143px;
-        margin-top: -150px;
+        border-radius: 40px;
     }
 
     #header #avtarization {
         width: 230px;
         height: 80px;
         right: 23px;
-        top: 20px;
     }
 
     #header h3 {
@@ -968,9 +1053,9 @@ b {
     }
 
     #nav {
-        margin-top: 30px;
         font-size: 30px;
         word-spacing: 1.5cap;
+        padding-top: 35px;
     }
 
     #nav a {
@@ -978,13 +1063,21 @@ b {
     }
 
     #avatar {
-        top: 33px;
+        top: 30px;
     }
 
     #sidebarToggle {
         width: 110px;
         height: 110px;
         font-size: 34px;
+        border-radius: 40px;
+    }
+
+    #basketToggle {
+        width: 110px;
+        height: 110px;
+        font-size: 34px;
+        border-radius: 40px;
     }
 
     #sidebar {
@@ -1080,5 +1173,100 @@ b {
 
     .social-icons {
         gap: 60px;
+    }
+
+    #basketToggle .olo {
+        width: 35px;
+        height: 35px;
+        bottom: 75px;
+        left: 75px;
+    }
+
+    #footer_basket {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+        background-color: #00ff88e1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: rgb(0, 0, 0);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease-out;
+        transform: translateY(0);
+    }
+
+    body.dark-theme #footer_basket {
+        background-color: #1c4431e1;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px #ffffff50;
+    }
+
+    body.dark-theme .btn-checkout {
+        text-shadow: 0 0 10px #ffffff50;
+    }
+
+    .basket-footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        padding: 0 20px;
+        margin-left: 50px;
+    }
+
+    .basket-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .basket-count {
+        font-size: 38px;
+        opacity: 0.9;
+    }
+
+    .basket-total {
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+    .btn-checkout {
+        background: white;
+        color: #000000;
+        border: none;
+        padding: 35px 80px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: all 0.3s ease;
+        font-size: 30px;
+        animation: pulse2 1.5s infinite ease-in-out;
+        box-shadow: 0 0px 25px rgba(0, 0, 0, 0.274);
+    }
+
+    body.dark-theme .btn-checkout {
+        background: rgb(54, 54, 54);
+        color: #ffffff;
+    }
+
+    .btn-checkout:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #footer_basket.instant-hide {
+        transition: none;
+        transform: translateY(100%);
     }
 }

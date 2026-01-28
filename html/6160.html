@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="../css/105.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 <body>
     <div id="sidebar">
@@ -58,7 +61,7 @@
         <div class="sidebar-section">
             <h4>Мои заказы</h4>
             <a href="#" class="sidebar-link">
-                <i class="fas fa-shopping-cart"></i> История покупок
+                <i class="fas fa-shopping-cart"></i> Корзина
             </a>
             <a href="#" class="sidebar-link">
                 <i class="fas fa-star"></i> Избранное
@@ -92,54 +95,56 @@
     <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
     <div id="Toggle">
-    <button id="sidebarToggle" onclick="toggleSidebar()">
+    <button id="sidebarToggle" onclick="toggleSidebar()">          <!-- 1 Toggle -->
         <i class="fas fa-bars"></i>
     </button>
-    </div>
-
+    <button id="basketToggle" onclick="window.location.href='/basket.html'">           <!-- 2 Toggle -->
+        <i class="fas fa-shopping-cart"></i>
+        <div class="olo"></div>
+    </button>
     <div id="header">
-        <div id="avatar"><p class="karamelka">Almazik</p></div>
-        <div id="avtarization"><i class="fa-solid fa-user"></i><a href="../firebase/reg.html"><h3>Авторизация</h3></a></div>
-
-        <ul id="nav">
-            <a href="../index.html">Главная</a>
-            <a href="../index2.html">Каталог</a>
-            <a href="../index3.html">Отзывы</a>
-            <a href="../support.html">Поддержка</a>
-        </ul>
+            <div id="avatar"><p class="karamelka">Almazik</p></div>
+            <div id="avtarization"><i class="fa-solid fa-user"></i><a href="firebase/reg.html"><h3>Авторизация</h3></a></div>
+            <ul id="nav">
+                <a href="/index.html">Главная</a>
+                <a href="/index2.html">Каталог</a>
+                <a href="/index3.html">Отзывы</a>
+                <a href="/html/support.html">Поддержка</a>
+            </ul>
+        </div>
     </div>
     
-    <div id="block21" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div id="block21" data-aos="fade-up">
         <div id="block31">
-            <li class="text"><p><b1>6160</b1> Алмазов Free Fire</p></li>
-            <li class="textf"><p>Быстрая доставка • Безопасная оплата • 24/7 Поддержка</p></li>
-            <li class="text1"><p>Описание товара</p></li>
-            <li class="text2"><p>6160 алмазов — лучший выбор для настоящих фанатов Free Fire. Открывает доступ ко всему премиум-контенту, эксклюзивным скинам и событиям. Быстрое и безопасное зачисление сразу после оплаты. Необходимы Player ID и сервер игры.</p></li>
-            <div class="blockimg6160"></div></div>
-        <div id="block41"></div>
+            <li class="text" data-aos="fade-up" data-aos-delay="100"><p><b1>6160</b1> Алмазов Free Fire</p></li>
+            <li class="textf" data-aos="fade-up" data-aos-delay="200"><p>Быстрая доставка • Безопасная оплата • 24/7 Поддержка</p></li>
+            <li class="text1" data-aos="fade-up" data-aos-delay="300"><p>Описание товара</p></li>
+            <li class="text2" data-aos="fade-up" data-aos-delay="400"><p>6160 алмазов — лучший выбор для настоящих фанатов Free Fire. Открывает доступ ко всему премиум-контенту, эксклюзивным скинам и событиям. Быстрое и безопасное зачисление сразу после оплаты. Необходимы Player ID и сервер игры.</p></li>
+            <div class="blockimg6160" data-aos="fade-up" data-aos-delay="200"></div></div>
+        <div id="block41" data-aos="fade-up" data-aos-delay="100"></div>
     </div>
 
-    <div id="block4">
-        <div id="block4-img"></div>
+    <div id="block4" data-aos="fade-up">
+        <div id="block4-img" data-aos="fade-up" data-aos-delay="200"></div>
         <div id="block4-2">
-            <li><h1>О пополнении <b>Free Fire</b></h1></li>
-            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="150"><h2>Алмазы - основная игровая валюта в  
-              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="150">Free Fire, которая позволяет покупать </li> 
-              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-offset="150">персонажей, скины, оружие и другие </li>
-              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-offset="150">внутриигровые предметы.</li></h2></li>
+            <li data-aos="fade-up" data-aos-delay="100"><h1>О пополнении <b>Free Fire</b></h1></li>
+            <li data-aos="fade-up" data-aos-delay="200"><h2>Алмазы - основная игровая валюта в  
+              <li>Free Fire, которая позволяет покупать </li100> 
+              <li>персонажей, скины, оружие и другие </li200>
+              <li>внутриигровые предметы.</li></h2></li>
 
-            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="150"><h2>Мы предлагаем моментальную доставку  
-              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-offset="150">алмазов после оплаты. Для пополнения </li> 
-              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-offset="150">потребуется только ваш Player ID и </li>
-              <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-offset="150">сервер игры.</li></h2></li>
+            <li data-aos="fade-up" data-aos-delay="300"><h2>Мы предлагаем моментальную доставку  
+              <li>алмазов после оплаты. Для пополнения </li500> 
+              <li>потребуется только ваш Player ID и </li600>
+              <li>сервер игры.</li></h2></li>
         </div>
     </div>
 
     <div id="footer1">
         <div id="MenuImg"></div>
-        <h1 class="pm2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">О магазине <b>Almazik</b></h1>
-        <h1 class="pm3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
-        <h1 class="pm4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
+        <h1 class="pm2" data-aos="fade-left">О магазине <b>Almazik</b></h1>
+        <h1 class="pm3" data-aos="fade-left" data-aos-delay="100">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
+        <h1 class="pm4" data-aos="fade-left" data-aos-delay="200">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
         <div id="Menu">
             <div id="Seti">
                 <li id="cont1">
@@ -167,12 +172,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../js/index.js"></script>
     <script>
-        AOS.init({
-            once: true,
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            checkAuthStatus();
-        });
+    AOS.init({
+        duration: 600
+    });
     </script>
 </body>
 </html>

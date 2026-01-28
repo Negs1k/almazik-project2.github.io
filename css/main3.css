@@ -157,21 +157,6 @@ h1 b{
     color: rgb(0, 211, 112);
 }
 
-#header {
-    position: fixed;
-    left: 50%;
-    background-color: rgba(255, 255, 255, 0.719);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 80px;
-    width: 1143px;
-    border-radius: 50px;
-    margin: auto;
-    margin-top: -150px;
-    transform: translateX(-50%);
-    z-index: 100;
-}
-
 #nav {
     list-style: none;
     display: block;

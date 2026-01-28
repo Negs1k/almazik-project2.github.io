@@ -50,23 +50,8 @@ h1 {
     font-size: 70px;
 }
 
-.textq h1 {
-    opacity: 0;
-    animation: fadeIn 3s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
 #block21 h1 {
-    font-size: 70px;
+    font-size: 80px;
 }
 
 h2 {
@@ -77,21 +62,6 @@ h2 {
 
 h1 b {
     color: rgb(0, 211, 112);
-}
-
-#header {
-    position: fixed;
-    left: 50%;
-    background-color: rgba(255, 255, 255, 0.719);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 80px;
-    width: 1143px;
-    border-radius: 50px;
-    margin: auto;
-    margin-top: -150px;
-    transform: translateX(-50%);
-    z-index: 100;
 }
 
 body.dark-theme #header {
@@ -186,19 +156,6 @@ body.dark-theme #header:hover #avtarization:hover {
     left: 20px;
 }
 
-#avatar {
-    background-image: url(../img/picture.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 40px;
-    position: absolute;
-    top: 15px;
-    left: 2.3%;
-}
 
 .karamelka {
     color: rgb(0, 0, 0); 
@@ -212,7 +169,7 @@ body.dark-theme #header:hover #avtarization:hover {
 #block21 {
     display: block;
     background-color: rgb(255, 255, 255);
-    height: 44cap;
+    height: 40cap;
     width: 120cap;
     border-radius: 60px;
     text-align: center;
@@ -337,10 +294,10 @@ body.dark-theme #header:hover #avtarization:hover {
 
 #block3 p {
     position: relative;
-    color: rgb(0, 0, 0);
+    color: rgb(212, 0, 255);
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.562);
     text-align: center;
     top: 470px;
     width: 100%;
@@ -586,7 +543,7 @@ body.dark-theme .fa-youtube:hover {
 
     .textq h1 {
         position: absolute;
-        left: 50%;
+        left: 35%;
         font-size: 70px;
     }
 

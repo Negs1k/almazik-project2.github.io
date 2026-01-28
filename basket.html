@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="negsik">
-    <title>Almazik - Отзывы</title>
-    <link rel="stylesheet" href="css/main3.css">
+    <title>Almazik - Магазин игрового доната</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -68,18 +65,18 @@
         </div>
         
         <div class="sidebar-section">
-            <h4>Настройки</h4>
-            <a href="javascript:void(0)" class="sidebar-link" onclick="openUserProfile()">
-                <i class="fas fa-user-cog"></i> Профиль
-            </a>
-            <a href="#" class="sidebar-link">
-                <i class="fas fa-bell"></i> Уведомления
-            </a>
-            <a href="javascript:void(0)" class="sidebar-link theme-toggle" onclick="toggleTheme()">
-                <i class="fas fa-moon"></i> Тема
-                <span class="theme-status" id="themeStatus">Светлая</span>
-            </a>
-        </div>
+        <h4>Настройки</h4>
+        <a href="javascript:void(0)" class="sidebar-link" onclick="openUserProfile()">
+            <i class="fas fa-user-cog"></i> Профиль
+        </a>
+        <a href="#" class="sidebar-link">
+            <i class="fas fa-bell"></i> Уведомления
+        </a>
+        <a href="javascript:void(0)" class="sidebar-link theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i> Тема
+            <span class="theme-status" id="themeStatus">Светлая</span>
+        </a>
+    </div>
         
         <div class="sidebar-footer">
             <p>© 2024–2025 Almazik</p>
@@ -113,32 +110,22 @@
             </ul>
         </div>
     </div>
+
     
-    <div id="block21" data-aos="fade-up">
-        <h1  data-aos="fade-up" data-aos-delay="100"><b>Отзывы</b></h1>
-        <h2  data-aos="fade-up" data-aos-delay="200">Здесь будут расположены отзывы других людей</h2>
-        
-        <div class="reviews-placeholder"  data-aos="fade-up" data-aos-delay="300">
-            <div class="placeholder-text">
-                <i class="fas fa-comments"></i>
-                <h3>Отзывы появятся здесь скоро</h3>
-                <p>На этой странице будут отображаться отзывы наших клиентов</p>
-            </div>
-        </div>
+
+    <div id="basketblock" data-aos="fade-up" data-aos-duration="1000">
     </div>
 
     <div id="footer">
         <div id="MenuImg"></div>
-        <h1 class="pm2" data-aos="fade-left">О магазине <b>Almazik</b></h1>
-        <h1 class="pm3" data-aos="fade-left" data-aos-delay="100">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
-        <h1 class="pm4" data-aos="fade-left" data-aos-delay="200">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
+        <h1 class="pm2">О магазине <b>Almazik</b></h1>
+        <h1 class="pm3">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
+        <h1 class="pm4">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
         <div id="Menu">
             <div id="Seti">
-                <li id="cont1">
-                    <p>© 2025-2026 Almazik</p>
+                <li id="cont1"><p>© 2025-2026 Almazik</p>
                 </li>
-                <li id="cont2">
-                    <p>Дизайнер Almazik</p>
+                <li id="cont2"><p>Дизайнер Almazik</p>
                 </li>
                 <li id="cont3">
                     <a href="index.html"><p>Главная</p></a>
@@ -156,10 +143,9 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/basket.js"></script>
     <script>
         AOS.init({
             duration: 600
