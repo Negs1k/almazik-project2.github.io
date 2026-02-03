@@ -913,3 +913,28 @@ li {
         left: 20px;
     }
 }
+
+@media (max-width: 1000px) {
+    #block4 {
+        height: 210cap;
+        width: 120cap;
+    }
+
+    #block4-2 {
+        height: 100cap;
+        width: 120cap;
+    }
+
+    #block4-2 h1 {
+        font-size: 110px;
+    }
+
+    #block4-2 h2 {
+        font-size: 60px;
+    }
+
+    #block4-img {
+        height: 100cap;
+        width: 100cap;
+    }
+}

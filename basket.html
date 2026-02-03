@@ -111,16 +111,25 @@
         </div>
     </div>
 
-    
-
-    <div id="basketblock" data-aos="fade-up" data-aos-duration="1000">
+    <div id="basketblock" data-aos="fade-up">
+        <h1  data-aos="fade-up" data-aos-delay="100"><b>Корзина</b></h1>
+        <h2  data-aos="fade-up" data-aos-delay="200">Здесь будут расположены товары вашей корзины</h2>
+        
+        <div class="reviews-placeholder"  data-aos="fade-up" data-aos-delay="300">
+            <div class="placeholder-text">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Корзина пуста</h3>
+                <h4>Добавьте товары из каталога, чтобы они появились здесь</h4>
+            </div>
+            <a href="index2.html"><div class="reviews-placeholder2"><h3>Нажмите что-бы перейти в каталог</h3></div></a>
+        </div>
     </div>
 
     <div id="footer">
         <div id="MenuImg"></div>
-        <h1 class="pm2">О магазине <b>Almazik</b></h1>
-        <h1 class="pm3">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
-        <h1 class="pm4">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
+        <h1 class="pm2" data-aos="fade-left">О магазине <b>Almazik</b></h1>
+        <h1 class="pm3" data-aos="fade-left" data-aos-delay="100">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
+        <h1 class="pm4" data-aos="fade-left" data-aos-delay="200">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
         <div id="Menu">
             <div id="Seti">
                 <li id="cont1"><p>© 2025-2026 Almazik</p>
@@ -148,6 +157,7 @@
     <script src="js/basket.js"></script>
     <script>
         AOS.init({
+            once: true,
             duration: 600
         });
     </script>

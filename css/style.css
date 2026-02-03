@@ -199,7 +199,7 @@ b1 {
 #basketblock {
     display: block;
     background-color: rgb(255, 255, 255);
-    height: 200cap;
+    height: 80cap;
     width: 120cap;
     border-radius: 60px;
     text-align: center;
@@ -571,6 +571,18 @@ body.dark-theme .fa-youtube:hover {
     }
 }
 
+@keyframes dark-pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 #sidebarToggle:hover {
     background: white;
     transform: scale(1.05);
@@ -807,6 +819,7 @@ body.dark-theme {
 }
 
 body.dark-theme #block2,
+body.dark-theme #basketblock,
 body.dark-theme #footer {
     background-color: #1e1e1e;
     color: #e0e0e0;
@@ -894,6 +907,91 @@ b {
 #footer_basket {
     position: absolute;
     right: 200cap;
+}
+
+.reviews-placeholder {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    padding: 80px 40px;
+    margin: 50px 70px;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border: 3px dashed #00d370;
+}
+
+.reviews-placeholder2 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reviews-placeholder2 h3 {
+    margin-top: 170px;
+    font-size: 35px;
+}
+
+.reviews-placeholder2:hover {
+    opacity: 1;
+}
+
+body.dark-theme .reviews-placeholder {
+    background-color: rgba(45, 45, 45, 0.9);
+    border-color: #00b894;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.placeholder-text i {
+    font-size: 80px;
+    color: #00d370;
+    margin-bottom: 20px;
+}
+
+body.dark-theme .placeholder-text i {
+    color: #00b894;
+}
+
+.placeholder-text h3 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+body.dark-theme .placeholder-text h3 {
+    color: #e0e0e0;
+}
+
+.placeholder-text h4 {
+    font-size: 18px;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+body.dark-theme .placeholder-text h4 {
+    color: #b0b0b0;
+}
+
+#basketblock h1 {
+    text-align: center;
+    padding-top: 60px;
+    padding-left: 0;
+    font-size: 75px;
+}
+
+#basketblock h2 {
+    text-align: center;
+    font-size: 35px;
+    padding: 0;
 }
 
 @media (max-width: 1000px) {
@@ -1268,5 +1366,39 @@ b {
     #footer_basket.instant-hide {
         transition: none;
         transform: translateY(100%);
+    }
+
+    .reviews-placeholder2 {
+        background-color: rgba(0, 0, 0, 0.61);
+        animation: dark-pulse 4s infinite;
+    }
+
+    .reviews-placeholder2 h3 {
+        animation: dark-pulse 4s infinite;
+        font-size: 50px;
+        margin-top: 350px;
+    }
+
+    #basketblock {
+        height: 160cap;
+    }
+
+    .reviews-placeholder {
+        padding: 180px 140px;
+        border: 3px dashed #00d370;
+    }
+
+    .placeholder-text h3 {
+        font-size: 62px;
+    }
+
+    .placeholder-text .fa-shopping-cart {
+        font-size: 110px;
+    }
+
+    .placeholder-text h4 {
+        font-size: 40px;
+        margin-top: 50px;
+        max-width: 700px;
     }
 }
