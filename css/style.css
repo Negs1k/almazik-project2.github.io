@@ -937,6 +937,7 @@ b {
 .reviews-placeholder2 h3 {
     margin-top: 170px;
     font-size: 35px;
+    color: white;
 }
 
 .reviews-placeholder2:hover {
@@ -993,6 +994,42 @@ body.dark-theme .placeholder-text h4 {
     font-size: 35px;
     padding: 0;
 }
+
+#buttonVip1, #buttonVip2, #buttonVip3, #buttonVip4, #buttonVip5, #buttonVip6,
+#buttonVipl1, #buttonVipl2 {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#buttonVip1:hover, #buttonVip2:hover, #buttonVip3:hover, #buttonVip4:hover,
+#buttonVip5:hover, #buttonVip6:hover, #buttonVipl1:hover, #buttonVipl2:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#block-success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(115, 255, 97, 0.719);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    left: 20%;
+    top: 20%;
+    border-radius: 40px;
+}
+
+#block-succenss p {
+    color: #48694d;
+    font-size: 40px;
+    margin-bottom: 300px;
+}   
 
 @media (max-width: 1000px) {
     #block2 {
@@ -1380,7 +1417,7 @@ body.dark-theme .placeholder-text h4 {
     }
 
     #basketblock {
-        height: 160cap;
+        height: 140cap;
     }
 
     .reviews-placeholder {
@@ -1400,5 +1437,14 @@ body.dark-theme .placeholder-text h4 {
         font-size: 40px;
         margin-top: 50px;
         max-width: 700px;
+    }
+
+    #basketblock h1 {
+        padding-top: 200px;
+        font-size: 95px;
+    }
+
+    #basketblock h2 {
+        font-size: 45px;
     }
 }

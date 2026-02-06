@@ -1,5 +1,4 @@
-    <script>
-        const firebaseConfig = {
+const firebaseConfig = {
             apiKey: "AIzaSyB7fW_kXBKW-KaHo3ejfYyn-uvRRp-_Y-o",
             authDomain: "website-project-8aeb4.firebaseapp.com",
             projectId: "website-project-8aeb4",
@@ -12,4 +11,8 @@
         if (typeof firebase !== 'undefined' && !firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
         }
-    </script>
+
+        AOS.init({
+            once: true,
+            duration: 600
+        });

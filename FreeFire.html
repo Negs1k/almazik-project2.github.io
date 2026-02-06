@@ -100,7 +100,7 @@
     </button>
     <button id="basketToggle" onclick="window.location.href='basket.html'">           <!-- 2 Toggle -->
         <i class="fas fa-shopping-cart"></i>
-        <div class="olo"></div>
+        <div class="olo">444</div>
     </button>
     <div id="header">
             <div id="avatar"><p class="karamelka">Almazik</p></div>
@@ -268,15 +268,32 @@
         </div>
     </div>
 
+    <div id="cartNotification" class="cart-notification">
+        <div class="cart-notification-content">
+            <i class="fas fa-check-circle notification-icon"></i>
+            <span class="notification-text">Вы успешно добавили товар в корзину!</span>
+            <button class="notification-close" onclick="hideCartNotification()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-progress"></div>
+    </div>
+
+    <div id="block-success">
+        <div class="success-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2>Успешно!</h2>
+            <p>Товар добавлен в корзину</p>
+            <button onclick="hideSuccessBlock()" class="success-btn">OK</button>
+        </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/index.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 600
-        });
-    </script>
+    <script src="js/firebase.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/basket.js"></script>
 </body>
 </html>

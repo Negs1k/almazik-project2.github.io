@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="negsik">
-    <title>Almazik - Магазин игрового доната</title>
+    <title>Almazik - Корзина</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/basket.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -56,7 +57,7 @@
         
         <div class="sidebar-section">
             <h4>Мои заказы</h4>
-            <a href="#" class="sidebar-link">
+            <a href="basket.html" class="sidebar-link active">
                 <i class="fas fa-shopping-cart"></i> Корзина
             </a>
             <a href="#" class="sidebar-link">
@@ -112,16 +113,17 @@
     </div>
 
     <div id="basketblock" data-aos="fade-up">
-        <h1  data-aos="fade-up" data-aos-delay="100"><b>Корзина</b></h1>
-        <h2  data-aos="fade-up" data-aos-delay="200">Здесь будут расположены товары вашей корзины</h2>
+        <h1 data-aos="fade-up" data-aos-delay="100" id="basketTitle"><b>Корзина</b></h1>
+        <h2 data-aos="fade-up" data-aos-delay="200" id="basketSubtitle">Здесь будут расположены товары вашей корзины</h2>
         
-        <div class="reviews-placeholder"  data-aos="fade-up" data-aos-delay="300">
+        <div class="placeholder-text2"><p>Все товыры добавленные в корзину будут отображаться здесь</p></div>
+        <div class="reviews-placeholder" data-aos="fade-up" data-aos-delay="300" id="emptyBasketPlaceholder">
             <div class="placeholder-text">
                 <i class="fas fa-shopping-cart"></i>
                 <h3>Корзина пуста</h3>
                 <h4>Добавьте товары из каталога, чтобы они появились здесь</h4>
             </div>
-            <a href="index2.html"><div class="reviews-placeholder2"><h3>Нажмите что-бы перейти в каталог</h3></div></a>
+            <a href="FreeFire.html"><div class="reviews-placeholder2"><h3>Нажмите что-бы перейти в каталог</h3></div></a>
         </div>
     </div>
 
@@ -152,14 +154,12 @@
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/index.js"></script>
     <script src="js/basket.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 600
-        });
-    </script>
+    <script src="js/firebase.js"></script>
 </body>
 </html>
