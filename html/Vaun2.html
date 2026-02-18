@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="negsik">
-    <title>Almazik - Каталог доната</title>
-    <link rel="stylesheet" href="css/main2.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Almazik - 105 Алмазов Free Fire</title>
+
+    <link rel="stylesheet" href="../css/105.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
@@ -22,7 +23,7 @@
             </button>
             <h2>Меню</h2>
         </div>
-        
+
         <div class="sidebar-profile" id="sidebarProfile">
             <div class="profile-avatar" id="sidebarAvatar">
                 <i class="fas fa-user"></i>
@@ -38,25 +39,25 @@
                 <i class="fas fa-sign-out-alt"></i> Выйти
             </button>
         </div>
-        
+
         <div class="sidebar-nav">
-            <a href="index.html" class="sidebar-link">
+            <a href="../index.html" class="sidebar-link">
                 <i class="fas fa-home"></i> Главная
             </a>
-            <a href="index2.html" class="sidebar-link">
+            <a href="../index2.html" class="sidebar-link">
                 <i class="fas fa-store"></i> Каталог
             </a>
-            <a href="index3.html" class="sidebar-link">
+            <a href="../index3.html" class="sidebar-link">
                 <i class="fas fa-comment"></i> Отзывы
             </a>
-            <a href="FreeFire.html" class="sidebar-link">
+            <a href="../FreeFire.html" class="sidebar-link">
                 <i class="fas fa-gamepad"></i> Free Fire
             </a>
-            <a href="html/support.html" class="sidebar-link">
+            <a href="../support.html" class="sidebar-link">
                 <i class="fas fa-headset"></i> Поддержка
             </a>
         </div>
-        
+
         <div class="sidebar-section">
             <h4>Мои заказы</h4>
             <a href="#" class="sidebar-link">
@@ -89,7 +90,7 @@
                 <span class="theme-status" id="themeStatus">Светлая</span>
             </a>
         </div>
-        
+
         <div class="sidebar-footer">
             <p>© 2024–2025 Almazik</p>
             <div class="social-icons">
@@ -100,14 +101,13 @@
             </div>
         </div>
     </div>
-    
     <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
     <div id="Toggle">
     <button id="sidebarToggle" onclick="toggleSidebar()">          <!-- 1 Toggle -->
         <i class="fas fa-bars"></i>
     </button>
-    <button id="basketToggle" onclick="window.location.href='basket.html'">           <!-- 2 Toggle -->
+    <button id="basketToggle" onclick="window.location.href='/basket.html'">           <!-- 2 Toggle -->
         <i class="fas fa-shopping-cart"></i>
         <div class="olo"></div>
     </button>
@@ -115,49 +115,41 @@
             <div id="avatar"><p class="karamelka">Almazik</p></div>
             <div id="avtarization"><i class="fa-solid fa-user"></i><a href="firebase/reg.html"><h3>Авторизация</h3></a></div>
             <ul id="nav">
-                <a href="index.html">Главная</a>
-                <a href="index2.html">Каталог</a>
-                <a href="index3.html">Отзывы</a>
-                <a href="html/support.html">Поддержка</a>
+                <a href="../index.html">Главная</a>
+                <a href="../index2.html">Каталог</a>
+                <a href="../index3.html">Отзывы</a>
+                <a href="../support.html">Поддержка</a>
             </ul>
         </div>
     </div>
-
-    <div id="block21" data-aos="fade-up">
-        <h1 data-aos="fade-up" data-aos-delay="100"> Центр <b>выгодных</b> <li data-aos="fade-up" data-aos-delay="200"> донатов в </li><li data-aos="fade-up" data-aos-delay="300"><b>любимые</b> игры</li></h1>
-        <div id="block2-cart" data-aos="fade-up" data-aos-delay="150">
-            <div class="class2Img"></div>
-            <div class="class3Img"></div>
-            <div class="class4Img"></div>
-            <div class="class5Img"></div>
-        </div>
-    </div>
-
-    <li class="textq" data-aos="fade-up" data-aos-delay="100"><h1>Каталог <b>игр:</b></h1></li>
-
-    <div id="block3" data-aos="fade-up" data-aos-delay="200">
-        <a href="FreeFire.html"><div class="blockff" data-aos="fade-up" data-aos-delay="100"><p>Free Fire</p></div></a>
-        <a href="Telegram.html"><div class="blocktg" data-aos="fade-up" data-aos-delay="100"><p>Telegram</p></div></a>
+    
+    <div id="block21Vaun" data-aos="fade-up">
+        <div id="block31">
+            <li class="text" data-aos="fade-up" data-aos-delay="100"><p>Месячный <p3>ваучер</p3></p></li>
+            <li class="textf" data-aos="fade-up" data-aos-delay="200"><p>Быстрая доставка • Безопасная оплата • 24/7 Поддержка</p></li>
+            <li class="text1" data-aos="fade-up" data-aos-delay="300"><p>Описание товара</p></li>
+            <li class="text2" data-aos="fade-up" data-aos-delay="400"><p>Если Free Fire для тебя ежедневная привычка, то ваучер на месяц станет лучшим выбором. Сразу начисляется 500 алмазов, а затем по 70 каждый день ещё 30 дней подряд 🎯 Всего ты получаешь 2600 алмазов, что делает этот пакет одним из самых выгодных решений. Пополнить счёт и играть с удовольствием - лучше сочетания просто нет.</p></li>
+            <div class="Vaun2" data-aos="fade-up" data-aos-delay="200"></div></div>
+        <div id="block41Vaun" data-aos="fade-up" data-aos-delay="500"></div>
     </div>
 
     <div id="block4" data-aos="fade-up">
-        <div id="block4-img" data-aos="fade-up" data-aos-delay="100"></div>
         <div id="block4-2">
-                <li data-aos="fade-up"><h1>О нашем <b>каталоге</b></h1></li>
-                <li data-aos="fade-up"><h2>В нашем каталоге представлены самые 
-                <li data-aos="fade-up">популярные игры, для которых мы </li> 
-                <li data-aos="fade-up">предлагаем безопасное и быстрое </li>
-                <li data-aos="fade-up">пополнение игровых валют и ресурсов.</h2></li>
+            <li data-aos="fade-up" data-aos-delay="100"><h1>О пополнении <b>Free Fire</b></h1></li>
+            <li data-aos="fade-up" data-aos-delay="200"><h2>Алмазы - основная игровая валюта в  
+              <li>Free Fire, которая позволяет покупать </li100> 
+              <li>персонажей, скины, оружие и другие </li200>
+              <li>внутриигровые предметы.</li></h2></li>
 
-                <li data-aos="fade-up"><h2>Все цены в каталоге указаны с учетом
-                <li data-aos="fade-up">скидок для постоянных клиентов. Мы </li> 
-                <li data-aos="fade-up">регулярно обновляем ассортимент и </li> 
-                <li data-aos="fade-up">добавляем новые игры по запросам </li>
-                <li data-aos="fade-up">наших пользователей.</li></li></h2>
+            <li data-aos="fade-up" data-aos-delay="300"><h2>Мы предлагаем моментальную доставку  
+              <li>алмазов после оплаты. Для пополнения </li500> 
+              <li>потребуется только ваш Player ID и </li600>
+              <li>сервер игры.</li></h2></li>
         </div>
+        <div id="block4-img" data-aos="fade-up" data-aos-delay="200"></div>
     </div>
 
-    <div id="footer">
+    <div id="footer1">
         <div id="MenuImg"></div>
         <h1 class="pm2" data-aos="fade-left">О магазине <b>Almazik</b></h1>
         <h1 class="pm3" data-aos="fade-left" data-aos-delay="100">Мы - ведущий поставщик игрового доната с 2024 года. <br> Наша миссия - сделать игровой опыт ярче и доступнее <br>для каждого игрока по всей России и СНГ.</h1>
@@ -171,10 +163,10 @@
                     <p>Дизайнер Almazik</p>
                 </li>
                 <li id="cont3">
-                    <a href="index.html"><p>Главная</p></a>
+                    <a href="../index.html"><p>Главная</p></a>
                 </li>
                 <li id="cont4">
-                    <a href="index2.html"><p>Каталог</p></a>
+                    <a href="../index2.html"><p>Каталог</p></a>
                 </li>
                 <li class="icon">
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -186,25 +178,10 @@
         </div>
     </div>
 
-    <div id="footer_basket">
-        <div class="basket-footer-content">
-            <div class="basket-summary">
-                <span class="basket-count">В корзине: 0 товаров</span>
-                <span class="basket-total">Итого: 0 ₽</span>
-            </div>
-            <button class="btn-checkout" onclick="window.location.href='basket.html'">
-                <i class="fas fa-shopping-cart"></i> Перейти в корзину
-            </button>
-        </div>
-    </div>
-
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
-    <script src="js/basket.js"></script>
-    <script src="js/currency.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/firebase.js"></script>
+    <script src="../js/basket.js"></script>
+    <script src="../js/currency.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/firebase.js"></script>
 </body>
 </html>
