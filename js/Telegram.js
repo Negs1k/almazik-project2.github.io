@@ -1,14 +1,31 @@
 (function() {
-    var starCards = document.querySelectorAll('.star-card');
-    var tgInput = document.getElementById('tgNickname');
-    var buyBtn = document.getElementById('buyStarsBtn');
-    var selectedCard = null;
+    // Цены за одну звезду в разных валютах
+    const PRICE_PER_STAR = { RUB: 1.25, KGS: 1.35 };
+    const MIN_STARS = 50;
 
+    // Элементы формы
+    const tgLoginInput = document.getElementById('tgLogin');
+    const starAmountInput = document.getElementById('starAmount');
+    const quickButtons = document.querySelectorAll('.quick-star');
+    const promoInput = document.getElementById('promoCode');
+    const pricePerStarSpan = document.querySelector('#pricePerStarDisplay strong');
+    const totalPriceSpan = document.querySelector('#totalPriceDisplay strong');
+    const orderBtn = document.getElementById('orderStarsBtn');
+
+    // Функция для корректировки минимального количества
+    function enforceMinStars() {
+        let value = parseInt(starAmountInput.value, 10);
+        if (isNaN(value) || value < MIN_STARS) {
+            starAmountInput.value = MIN_STARS;
+        }
+    }
+
+    // Функции для работы с валютой
     function getCurrentCurrency() {
         if (window.currencyManager && typeof window.currencyManager.getCurrentCurrency === 'function') {
             return window.currencyManager.getCurrentCurrency();
         }
-        var saved = localStorage.getItem('preferredCurrency');
+        const saved = localStorage.getItem('preferredCurrency');
         return saved === 'KGS' ? 'KGS' : 'RUB';
     }
 
@@ -19,62 +36,77 @@
         return getCurrentCurrency() === 'KGS' ? 'С' : '₽';
     }
 
+    // Обновление отображаемых цен
     function updatePrices() {
-        var currency = getCurrentCurrency();
-        var symbol = getCurrencySymbol();
-        starCards.forEach(function(card) {
-            var priceRub = card.getAttribute('data-price-rub');
-            var priceKgs = card.getAttribute('data-price-kgs');
-            var price = currency === 'KGS' ? priceKgs : priceRub;
-            var priceSpan = card.querySelector('.star-price');
-            if (priceSpan) {
-                priceSpan.textContent = price + ' ' + symbol;
-            }
-        });
+        enforceMinStars(); // корректируем перед расчётом
+        const currency = getCurrentCurrency();
+        const symbol = getCurrencySymbol();
+        const price = PRICE_PER_STAR[currency];
+        const amount = parseInt(starAmountInput.value, 10) || MIN_STARS;
+        const total = price * amount;
+
+        pricePerStarSpan.textContent = price.toFixed(2) + symbol;
+        totalPriceSpan.textContent = total.toFixed(2) + ' ' + symbol;
     }
 
-    starCards.forEach(function(card) {
-        card.addEventListener('click', function() {
-            starCards.forEach(function(c) { c.classList.remove('active'); });
-            this.classList.add('active');
-            selectedCard = this;
+    // Быстрые кнопки
+    quickButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const stars = parseInt(this.dataset.stars, 10);
+            starAmountInput.value = stars;
+            updatePrices();
         });
     });
 
-    buyBtn.addEventListener('click', function() {
-        if (!selectedCard) {
-            alert('Пожалуйста, выберите количество звёзд.');
+    // Ручное изменение количества
+    starAmountInput.addEventListener('input', updatePrices);
+    starAmountInput.addEventListener('blur', enforceMinStars); // дополнительно корректируем при потере фокуса
+
+    // Подписка на изменение валюты
+    function subscribeToCurrencyChanges() {
+        document.querySelectorAll('.currency-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                setTimeout(updatePrices, 50);
+            });
+        });
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'preferredCurrency') updatePrices();
+        });
+    }
+    subscribeToCurrencyChanges();
+
+    // Оформление заказа
+    orderBtn.addEventListener('click', function() {
+        const login = tgLoginInput.value.trim();
+        if (!login) {
+            alert('Пожалуйста, введите логин Telegram.');
             return;
         }
-        var nickname = tgInput.value.trim();
-        if (!nickname) {
-            alert('Введите ваш никнейм в Telegram.');
+        const amount = parseInt(starAmountInput.value, 10);
+        if (isNaN(amount) || amount < MIN_STARS) {
+            alert(`Минимальное количество звёзд для покупки — ${MIN_STARS}.`);
+            starAmountInput.value = MIN_STARS;
+            updatePrices();
             return;
         }
-        var stars = selectedCard.getAttribute('data-stars');
-        var currency = getCurrentCurrency();
-        var price = currency === 'KGS' ? selectedCard.getAttribute('data-price-kgs') : selectedCard.getAttribute('data-price-rub');
-        var symbol = getCurrencySymbol();
+        const currency = getCurrentCurrency();
+        const pricePerStar = PRICE_PER_STAR[currency];
+        const total = pricePerStar * amount;
+        const symbol = getCurrencySymbol();
+        const promo = promoInput.value.trim();
+
+        const productName = amount + ' ★';
+        const productId = 'telegram_stars_' + amount;
+        const imageUrl = 'img/stars.png'; // замените на реальный путь, если нужно
 
         if (window.basket && typeof window.basket.addItem === 'function') {
-            var productName = stars + ' ★';
-            var productId = 'telegram_stars_' + stars;
-            var imageUrl = 'img/stars.png';
-            window.basket.addItem(productId, productName, parseInt(price), imageUrl);
+            window.basket.addItem(productId, productName, total, imageUrl);
+            alert('Товар добавлен в корзину!');
         } else {
-            alert('Заказ оформлен!\nЗвёзд: ' + stars + ' ★\nСумма: ' + price + ' ' + symbol + '\nTelegram: @' + nickname);
+            alert(`Заказ оформлен!\nЛогин: @${login}\nКоличество: ${amount} ★\nСумма: ${total.toFixed(2)} ${symbol}\nПромокод: ${promo || 'не указан'}`);
         }
     });
 
+    // Инициализация при загрузке
     updatePrices();
-
-    document.querySelectorAll('.currency-option').forEach(function(opt) {
-        opt.addEventListener('click', function() {
-            setTimeout(updatePrices, 50);
-        });
-    });
-
-    window.addEventListener('storage', function(e) {
-        if (e.key === 'preferredCurrency') updatePrices();
-    });
 })();

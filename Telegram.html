@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="negsik">
-    <title>Almazik - Free Fire</title>
+    <title>Almazik - Telegram Stars</title>
     <link rel="stylesheet" href="css/FreeFire.css">
     <link rel="stylesheet" href="css/Telegram.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
 </head>
 <body>
     <div id="sidebar">
@@ -50,8 +48,11 @@
             <a href="index3.html" class="sidebar-link">
                 <i class="fas fa-comment"></i> Отзывы
             </a>
-            <a href="FreeFire.html" class="sidebar-link active">
+            <a href="FreeFire.html" class="sidebar-link">
                 <i class="fas fa-gamepad"></i> Free Fire
+            </a>
+            <a href="Telegram.html" class="sidebar-link active">
+                <i class="fab fa-telegram"></i> Telegram Stars
             </a>
             <a href="html/support.html" class="sidebar-link">
                 <i class="fas fa-headset"></i> Поддержка
@@ -60,7 +61,7 @@
         
         <div class="sidebar-section">
             <h4>Мои заказы</h4>
-            <a href="#" class="sidebar-link">
+            <a href="basket.html" class="sidebar-link">
                 <i class="fas fa-shopping-cart"></i> Корзина
             </a>
             <a href="#" class="sidebar-link">
@@ -74,17 +75,17 @@
                 <i class="fas fa-user-cog"></i> Профиль
             </a>
             <a href="javascript:void(0)" class="sidebar-link currency-toggle" id="currencyToggle">
-            <i class="fas fa-money-bill"></i> Валюта
-            <i class="fas fa-chevron-down" id="currencyChevron"></i>
-        </a>
-        <div class="currency-submenu" id="currencySubmenu">
-            <a href="javascript:void(0)" class="sidebar-link currency-option active" data-currency="RUB">
-                <i class="fas fa-ruble-sign"></i> Рубли (RUB)
+                <i class="fas fa-money-bill"></i> Валюта
+                <i class="fas fa-chevron-down" id="currencyChevron"></i>
             </a>
-            <a href="javascript:void(0)" class="sidebar-link currency-option" data-currency="KGS">
-                <i>С</i> Сомы (KGS)
-            </a>
-        </div>
+            <div class="currency-submenu" id="currencySubmenu">
+                <a href="javascript:void(0)" class="sidebar-link currency-option active" data-currency="RUB">
+                    <i class="fas fa-ruble-sign"></i> Рубли (RUB)
+                </a>
+                <a href="javascript:void(0)" class="sidebar-link currency-option" data-currency="KGS">
+                    <i>С</i> Сомы (KGS)
+                </a>
+            </div>
             <a href="javascript:void(0)" class="sidebar-link theme-toggle" onclick="toggleTheme()">
                 <i class="fas fa-moon"></i> Тема
                 <span class="theme-status" id="themeStatus">Светлая</span>
@@ -105,14 +106,14 @@
     <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
     <div id="Toggle">
-    <button id="sidebarToggle" onclick="toggleSidebar()">          <!-- 1 Toggle -->
-        <i class="fas fa-bars"></i>
-    </button>
-    <button id="basketToggle" onclick="window.location.href='basket.html'">           <!-- 2 Toggle -->
-        <i class="fas fa-shopping-cart"></i>
-        <div class="olo"></div>
-    </button>
-    <div id="header">
+        <button id="sidebarToggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <button id="basketToggle" onclick="window.location.href='basket.html'">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="olo"></div>
+        </button>
+        <div id="header">
             <div id="avatar"><p class="karamelka">Almazik</p></div>
             <div id="avtarization"><i class="fa-solid fa-user"></i><a href="firebase/reg.html"><h3>Авторизация</h3></a></div>
             <ul id="nav">
@@ -123,13 +124,42 @@
             </ul>
         </div>
     </div>
+
+    <div class="stars-purchase-panel" data-aos="fade-up" data-aos-delay="100">
+            <h2>Покупка звезд</h2>
+
+            <div class="form-row">
+                <label>Логин Telegram:</label>
+                <input type="text" id="tgLogin" placeholder="username без @">
+            </div>
+
+            <div class="form-row">
+                <label>Количество звёзд:</label>
+                <input type="number" id="starAmount" value="50" min="1" step="1">
+                <div class="quick-buttons">
+                    <button class="quick-star" data-stars="50">50 ★</button>
+                    <button class="quick-star" data-stars="100">100 ★</button>
+                    <button class="quick-star" data-stars="150">150 ★</button>
+                    <button class="quick-star" data-stars="200">200 ★</button>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Промокод (если есть):</label>
+                <input type="text" id="promoCode" placeholder="Введите промокод">
+            </div>
+
+            <div class="price-info">
+                <span id="pricePerStarDisplay">Цена за 1 звезду: <strong>1.25₽</strong></span>
+                <span id="totalPriceDisplay">Итого: <strong>62.5 ₽</strong></span>
+            </div>
+
+            <button class="order-btn" id="orderStarsBtn">Оформить заказ</button>
+        </div>
     
-    <div id="block21" data-aos="fade-up">
-        <div id="block21-1" data-aos="fade-up" data-aos-delay="100"><h1>Каталог <b>сервисов</b> и <b>игр</b></h1>
-        <h2 data-aos="fade-up" data-aos-delay="200">Пополнение звёзд Telegram по самым выгодным ценам! Мгновенное начисление, безопасная оплата и круглосуточная поддержка для всех пользователей.</h2>
-    </div>
-        <div id="block21-2" data-aos="fade-up" data-aos-delay="100">
-            <p>Выбирите <b>удобную</b> для вас <b>валюту:</b></p>
+    
+        <div id="lin21">
+            <div id="block21-2" data-aos="fade-up" data-aos-delay="100">
             <a href="javascript:void(0)" class="sidebar-link currency-toggle" id="currencyToggleMain">
                 <i class="fas fa-money-bill"></i> Валюта
                 <i class="fas fa-chevron-down" id="currencyChevronMain"></i>
@@ -143,50 +173,8 @@
                 </a>
             </div>
         </div>
-    </div>
-
-    <div id="block3" data-aos="fade-up">
-
-        <div class="stars-selection" data-aos="fade-up" data-aos-delay="100">
-            <h2>Выберите количество звёзд⭐</h2>
-            
-            <div class="stars-cards">
-                <div class="star-card" data-stars="50" data-price-rub="70" data-price-kgs="75">
-                    <span class="star-count">50 ⭐</span>
-                    <span class="star-price">70 ₽</span>
-                </div>
-                <div class="star-card" data-stars="100" data-price-rub="140" data-price-kgs="150">
-                    <span class="star-count">100 ⭐</span>
-                    <span class="star-price">140 ₽</span>
-                </div>
-                <div class="star-card" data-stars="150" data-price-rub="210" data-price-kgs="225">
-                    <span class="star-count">150 ⭐</span>
-                    <span class="star-price">210 ₽</span>
-                </div>
-                <div class="star-card" data-stars="200" data-price-rub="280" data-price-kgs="300">
-                    <span class="star-count">200 ⭐</span>
-                    <span class="star-price">280 ₽</span>
-                </div>
-                <div class="star-card" data-stars="250" data-price-rub="350" data-price-kgs="375">
-                    <span class="star-count">250 ⭐</span>
-                    <span class="star-price">350 ₽</span>
-                </div>
-                <div class="star-card" data-stars="300" data-price-rub="420" data-price-kgs="450">
-                    <span class="star-count">300 ⭐</span>
-                    <span class="star-price">420 ₽</span>
-                </div>
-            </div>
-
         </div>
-        
-            <div id="block3-1">
-                <div class="purchase-form">
-                <input type="text" id="tgNickname" placeholder="Ваш никнейм в Telegram (без @)">
-                <button id="buyStarsBtn" class="buy-btn">Купить</button>
-            </div>
-            
-        </div>
-    </div>
+    
 
     <div id="block4" data-aos="fade-up">
         <div id="block4-2">
@@ -195,7 +183,6 @@
               <li>Free Fire, которая позволяет покупать </li100> 
               <li>персонажей, скины, оружие и другие </li200>
               <li>внутриигровые предметы.</li></h2></li>
-
             <li data-aos="fade-up" data-aos-delay="300"><h2>Мы предлагаем моментальную доставку  
               <li>алмазов после оплаты. Для пополнения </li500> 
               <li>потребуется только ваш Player ID и </li600>
@@ -211,18 +198,10 @@
         <h1 class="pm4" data-aos="fade-left" data-aos-delay="200">Работаем с официальными партнерами игровых. <br> Гарантируем 100% безопасность всех транзакций <br>и моментальную доставку приобретенных товаров.</h1>
         <div id="Menu">
             <div id="Seti">
-                <li id="cont1">
-                    <p>© 2025-2026 Almazik</p>
-                </li>
-                <li id="cont2">
-                    <p>Дизайнер Almazik</p>
-                </li>
-                <li id="cont3">
-                    <a href="index.html"><p>Главная</p></a>
-                </li>
-                <li id="cont4">
-                    <a href="index2.html"><p>Каталог</p></a>
-                </li>
+                <li id="cont1"><p>© 2025-2026 Almazik</p></li>
+                <li id="cont2"><p>Дизайнер Almazik</p></li>
+                <li id="cont3"><a href="index.html"><p>Главная</p></a></li>
+                <li id="cont4"><a href="index2.html"><p>Каталог</p></a></li>
                 <li class="icon">
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -231,7 +210,7 @@
                 </li>
             </div>
         </div>
-      </div>
+    </div>
 
     <div id="footer_basket">
         <div class="basket-footer-content">
@@ -246,12 +225,12 @@
     </div>
 
     <div id="blur-black"></div>
-        <div id="center-success">
-            <i class="fa-solid fa-circle-check"></i>
-            <p>Товар добавлен в корзину</p>
-            <div class="center-buttons">
-                <button class="continue-btn">Продолжить покупки</button>
-                <button class="cart-btn">В корзину</button>
+    <div id="center-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Товар добавлен в корзину</p>
+        <div class="center-buttons">
+            <button class="continue-btn">Продолжить покупки</button>
+            <button class="cart-btn">В корзину</button>
         </div>
     </div>
 
@@ -260,9 +239,7 @@
             const toggle = document.getElementById('currencyToggleMain');
             const submenu = document.getElementById('currencySubmenuMain');
             const chevron = document.getElementById('currencyChevronMain');
-
             if (!toggle || !submenu) return;
-
             toggle.addEventListener('click', function(e) {
                 e.preventDefault();
                 submenu.classList.toggle('show');
@@ -270,30 +247,25 @@
                     chevron.style.transform = submenu.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
                 }
             });
-
             document.addEventListener('click', function(event) {
                 if (!toggle.contains(event.target) && !submenu.contains(event.target)) {
                     submenu.classList.remove('show');
                     if (chevron) chevron.style.transform = 'rotate(0)';
                 }
             });
-
             const options = submenu.querySelectorAll('.currency-option');
             options.forEach(opt => {
                 opt.addEventListener('click', function(e) {
                     e.preventDefault();
                     const currency = this.dataset.currency;
-
                     options.forEach(o => o.classList.remove('active'));
                     this.classList.add('active');
-
                     if (window.currencyManager && typeof window.currencyManager.setCurrency === 'function') {
                         window.currencyManager.setCurrency(currency);
                     } else {
                         localStorage.setItem('preferredCurrency', currency);
                         if (typeof window.updatePrices === 'function') window.updatePrices();
                     }
-
                     submenu.classList.remove('show');
                     if (chevron) chevron.style.transform = 'rotate(0)';
                 });
