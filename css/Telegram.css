@@ -94,15 +94,15 @@
 }
 
 .premium1 {
-    background-image: url("/img/PremiumTG_3.png");
+    background-image: url("../img/PremiumTG_3.png");
 }
 
 .premium2 {
-    background-image: url("/img/PremiumTG_6.png");
+    background-image: url("../img/PremiumTG_6.png");
 }
 
 .premium3 {
-    background-image: url("/img/PremiumTG_12.png");
+    background-image: url("../img/PremiumTG_12.png");
 }
 
 .prem-top {
